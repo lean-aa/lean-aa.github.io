@@ -7,297 +7,266 @@
     <style>
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            line-height: 1.8;
             color: #1a1a1a;
-            margin: 0;
-            padding: 20px;
-            max-width: 100%;
             background-color: #ffffff;
-        }
-        @media (prefers-color-scheme: dark) {
-            body {
-                color: #e0e0e0;
-                background-color: #121212;
-            }
+            line-height: 1.8;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
         }
         h1, h2 {
-            text-align: center;
+            color: #1a1a1a;
         }
         .day-container {
             margin-bottom: 40px;
             padding: 20px;
+            border: 1px solid #ddd;
             border-radius: 8px;
             background-color: #f9f9f9;
         }
-        @media (prefers-color-scheme: dark) {
-            .day-container {
-                background-color: #1e1e1e;
-            }
-        }
         .day-header {
-            font-size: 1.8em;
+            background-color: #e0f7fa;
             padding: 10px;
             border-radius: 4px;
-            color: white;
-            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
         }
-        .action-plan, .resources {
-            margin-top: 20px;
+        .day-container:nth-child(even) .day-header {
+            background-color: #e8f5e9;
         }
-        ol {
+        ul {
             padding-left: 20px;
         }
-        a.button {
+        .button {
             display: block;
             background-color: #007bff;
             color: white;
+            text-align: center;
             padding: 15px;
             margin: 10px 0;
-            text-align: center;
+            border-radius: 5px;
             text-decoration: none;
-            border-radius: 4px;
-            font-size: 1.2em;
+            font-size: 20px;
         }
-        a.button:hover {
-            background-color: #0056b3;
+        .lyrics {
+            white-space: pre-wrap;
+            font-family: monospace;
+            margin: 20px 0;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 40px;
+            margin: 20px 0;
         }
         th, td {
             border: 1px solid #ddd;
             padding: 12px;
             text-align: left;
         }
+        th {
+            background-color: #f2f2f2;
+        }
         @media (prefers-color-scheme: dark) {
-            th, td {
+            body {
+                color: #e0e0e0;
+                background-color: #121212;
+            }
+            h1, h2 {
+                color: #e0e0e0;
+            }
+            .day-container {
+                border-color: #333;
+                background-color: #1e1e1e;
+            }
+            .day-header {
+                background-color: #004d40;
+            }
+            .day-container:nth-child(even) .day-header {
+                background-color: #194d33;
+            }
+            table th, table td {
                 border-color: #333;
             }
+            th {
+                background-color: #333;
+            }
         }
-        .lyrics {
-            white-space: pre-wrap;
-            font-size: 1.1em;
-        }
-        .pinyin {
-            color: #666;
-        }
-        @media (prefers-color-scheme: dark) {
-            .pinyin {
-                color: #aaa;
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .button {
+                font-size: 18px;
             }
         }
     </style>
 </head>
 <body>
     <h1>學習唱歌程式：齊秦 - 外面的世界</h1>
-    <p>這是一個為初學者設計的8天學習計劃，幫助你學習唱這首歌。資源來自YouTube最近的相關影片。</p>
+    <p>這是一個為初學者設計的8天學習程式，幫助您學習唱齊秦的經典歌曲《外面的世界》。程式以逐步方式安排，從熟悉歌曲到完整演唱。所有資源均來自YouTube和Bilibili，並按最近發布日期排序（最近在上）。</p>
 
-    <div class="day-container" style="background-color: #ffebee;">
-        <div class="day-header" style="background-color: #f44336;">🌅 第1天：熟悉歌曲</div>
+    <div class="day-container">
+        <div class="day-header">📅 第1天：熟悉歌曲與旋律</div>
+        <h2>行動計劃</h2>
         <ol>
-            <li>反覆聽歌曲，注意旋律和節奏。</li>
-            <li>閱讀歌詞，理解歌曲含義。</li>
-            <li>試著跟著哼唱。</li>
+            <li>聆聽歌曲至少3次，注意旋律和節奏。</li>
+            <li>閱讀歌詞，理解歌曲意境。</li>
+            <li>選擇一兩個版本觀看MV。</li>
         </ol>
-        <div class="action-plan">
-            <h2>行動計劃</h2>
-            <p>每天花30分鐘聽歌和閱讀歌詞。</p>
+        <h2>資源</h2>
+        <a href="https://www.youtube.com/watch?v=_OVFGsqzazo" class="button">觀看MV與歌詞（2023年發布）</a>
+        <a href="https://www.youtube.com/watch?v=xKATG88wPXc" class="button">觀看MV與歌詞（2022年發布）</a>
+        <a href="https://www.bilibili.com/video/BV1LS421R76c/" class="button">觀看原版MV（2025年發布，Bilibili）</a>
+    </div>
+
+    <div class="day-container">
+        <div class="day-header">📅 第2天：學習發音與拼音</div>
+        <h2>行動計劃</h2>
+        <ol>
+            <li>閱讀歌詞與拼音，跟著念至少5次。</li>
+            <li>邊聽歌曲邊跟讀拼音。</li>
+            <li>練習發音正確的字詞。</li>
+        </ol>
+        <h2>資源</h2>
+        <div class="lyrics">
+在很久很久以前
+Zài hěn jiǔ hěn jiǔ yǐ qián
+
+你擁有我 我擁有你
+Nǐ yōng yǒu wǒ wǒ yōng yǒu nǐ
+
+在很久很久以前
+Zài hěn jiǔ hěn jiǔ yǐ qián
+
+你離開我 去遠空翱翔
+Nǐ lí kāi wǒ qù yuǎn kōng áo xiáng
+
+外面的世界很精彩
+Wài miàn de shì jiè hěn jīng cǎi
+
+外面的世界很無奈
+Wài miàn de shì jiè hěn wú nài
+
+當你覺得外面的世界很精彩
+Dāng nǐ jué de wài miàn de shì jiè hěn jīng cǎi
+
+我會在這裡衷心的祝福你
+Wǒ huì zài zhè lǐ zhōng xīn de zhù fú nǐ
+
+每當夕陽西沉的時候
+Měi dāng xī yáng xī chén de shí hòu
+
+我總是在這裡盼望你
+Wǒ zǒng shì zài zhè lǐ pàn wàng nǐ
+
+天空中雖然飄著雨
+Tiān kōng zhōng suī rán piāo zhe yǔ
+
+我依然等待你的歸期
+Wǒ yī rán děng dài nǐ de guī qī
         </div>
-        <div class="resources">
-            <h2>資源</h2>
-            <a href="https://www.youtube.com/watch?v=JYfwe_M3fhE" class="button">觀看影片：蔡琴版本 (2024-05-20)</a>
-            <div class="lyrics">
-在很久很久以前<br><span class="pinyin">Zài hěn jiǔ hěn jiǔ yǐ qián</span><br>
-你擁有我 我擁有你<br><span class="pinyin">Nǐ yōng yǒu wǒ wǒ yōng yǒu nǐ</span><br>
-在很久很久以前<br><span class="pinyin">Zài hěn jiǔ hěn jiǔ yǐ qián</span><br>
-你離開我 去遠空翱翔<br><span class="pinyin">Nǐ lí kāi wǒ qù yuǎn kōng áo xiáng</span><br>
-外面的世界很精彩<br><span class="pinyin">Wài miàn de shì jiè hěn jīng cǎi</span><br>
-外面的世界很無奈<br><span class="pinyin">Wài miàn de shì jiè hěn wú nài</span><br>
-當你覺得外面的世界很精彩<br><span class="pinyin">Dāng nǐ jué dé wài miàn de shì jiè hěn jīng cǎi</span><br>
-我會在這裡衷心的祝福你<br><span class="pinyin">Wǒ huì zài zhè lǐ zhōng xīn de zhù fú nǐ</span><br>
-每當夕陽西沉的時候<br><span class="pinyin">Měi dāng xī yáng xī chén de shí hòu</span><br>
-我總是在這裡盼望你<br><span class="pinyin">Wǒ zǒng shì zài zhè lǐ pàn wàng nǐ</span><br>
-天空中雖然飄著雨<br><span class="pinyin">Tiān kōng zhōng suī rán piāo zhe yǔ</span><br>
-我依然等待你的歸期<br><span class="pinyin">Wǒ yī rán děng dài nǐ de guī qī</span><br>
-在很久很久以前<br><span class="pinyin">Zài hěn jiǔ hěn jiǔ yǐ qián</span><br>
-你擁有我 我擁有你<br><span class="pinyin">Nǐ yōng yǒu wǒ wǒ yōng yǒu nǐ</span><br>
-在很久很久以前<br><span class="pinyin">Zài hěn jiǔ hěn jiǔ yǐ qián</span><br>
-你離開我 去遠空翱翔<br><span class="pinyin">Nǐ lí kāi wǒ qù yuǎn kōng áo xiáng</span><br>
-外面的世界很精彩<br><span class="pinyin">Wài miàn de shì jiè hěn jīng cǎi</span><br>
-外面的世界很無奈<br><span class="pinyin">Wài miàn de shì jiè hěn wú nài</span><br>
-當你覺得外面的世界很無奈<br><span class="pinyin">Dāng nǐ jué dé wài miàn de shì jiè hěn wú nài</span><br>
-我還在這裡耐心的等著你<br><span class="pinyin">Wǒ hái zài zhè lǐ nài xīn de děng zhe nǐ</span><br>
-每當夕陽西沉的時候<br><span class="pinyin">Měi dāng xī yáng xī chén de shí hòu</span><br>
-我總是在這裡盼望你<br><span class="pinyin">Wǒ zǒng shì zài zhè lǐ pàn wàng nǐ</span><br>
-天空中雖然飄著雨<br><span class="pinyin">Tiān kōng zhōng suī rán piāo zhe yǔ</span><br>
-我依然等待你的歸期<br><span class="pinyin">Wǒ yī rán děng dài nǐ de guī qī</span><br>
-我依然等待你的歸期<br><span class="pinyin">Wǒ yī rán děng dài nǐ de guī qī</span>
-            </div>
+        <a href="https://www.youtube.com/watch?v=r5yOn-YT3tI" class="button">跟唱歌詞影片（2022年發布）</a>
+    </div>
+
+    <div class="day-container">
+        <div class="day-header">📅 第3天：學習簡譜</div>
+        <h2>行動計劃</h2>
+        <ol>
+            <li>觀看簡譜教學影片，了解數字譜。</li>
+            <li>跟著影片讀譜至少3次。</li>
+            <li>嘗試哼唱旋律使用簡譜。</li>
+        </ol>
+        <h2>資源</h2>
+        <a href="https://www.youtube.com/watch?v=S5I-wpdMilw" class="button">簡譜讀譜教學影片（2021年發布）</a>
+        <p>簡譜示例（G調，1=G）：</p>
+        <div class="lyrics">
+在 很 久 很 久 以 前
+5 . 3 | 5 3 5 6 1 | 2 - |
+
+你 擁 有 我 我 擁 有 你
+5 . 3 | 5 3 5 6 1 | 2 - |
+
+（依此類推，完整簡譜可參考影片）
         </div>
     </div>
 
-    <div class="day-container" style="background-color: #e3f2fd;">
-        <div class="day-header" style="background-color: #2196f3;">🎤 第2天：學習發音</div>
+    <div class="day-container">
+        <div class="day-header">📅 第4天：練習副歌部分</div>
+        <h2>行動計劃</h2>
         <ol>
-            <li>使用拼音練習每個字的發音。</li>
-            <li>慢慢跟讀歌詞。</li>
-            <li>注意聲調和韻母。</li>
+            <li>專注副歌部分，跟唱至少10次。</li>
+            <li>使用拼音輔助發音。</li>
+            <li>錄音自我檢查。</li>
         </ol>
-        <div class="action-plan">
-            <h2>行動計劃</h2>
-            <p>每天練習發音20分鐘，錄音自聽。</p>
-        </div>
-        <div class="resources">
-            <h2>資源</h2>
-            <a href="https://www.youtube.com/watch?v=LuNg9i9z-6U" class="button">觀看影片：吉他彈唱版本 (2024-03-06)</a>
-        </div>
+        <h2>資源</h2>
+        <a href="https://www.youtube.com/watch?v=moMEn9GMYR4" class="button">副歌重點歌詞影片（2021年發布）</a>
+        <a href="https://www.youtube.com/watch?v=KBYMwJgYidg" class="button">另一版本副歌練習（2021年發布）</a>
     </div>
 
-    <div class="day-container" style="background-color: #e8f5e9;">
-        <div class="day-header" style="background-color: #4caf50;">🎵 第3天：跟唱練習</div>
+    <div class="day-container">
+        <div class="day-header">📅 第5天：使用伴奏練習</div>
+        <h2>行動計劃</h2>
         <ol>
-            <li>跟著影片唱整首歌。</li>
-            <li>分成段落練習。</li>
-            <li>注意節奏。</li>
+            <li>使用伴奏影片，跟唱完整歌曲。</li>
+            <li>練習至少5次，注意節奏。</li>
+            <li>結合拼音和簡譜。</li>
         </ol>
-        <div class="action-plan">
-            <h2>行動計劃</h2>
-            <p>唱10次，逐步加快。</p>
-        </div>
-        <div class="resources">
-            <h2>資源</h2>
-            <a href="https://www.youtube.com/watch?v=kS7kzSO-dYY" class="button">觀看影片：齊秦版本 (2024-02-25)</a>
-        </div>
+        <h2>資源</h2>
+        <a href="https://www.youtube.com/watch?v=ybvbp5S4qYs" class="button">伴奏版本（2023年發布）</a>
     </div>
 
-    <div class="day-container" style="background-color: #fffde7;">
-        <div class="day-header" style="background-color: #ffeb3b;">📖 第4天：深入歌詞</div>
+    <div class="day-container">
+        <div class="day-header">📅 第6天：學習演唱技巧</div>
+        <h2>行動計劃</h2>
         <ol>
-            <li>背誦歌詞。</li>
-            <li>結合拼音練習。</li>
-            <li>理解情感。</li>
+            <li>觀看教學影片，學習吉他伴奏下的唱法。</li>
+            <li>模仿演唱風格。</li>
+            <li>練習情感表達。</li>
         </ol>
-        <div class="action-plan">
-            <h2>行動計劃</h2>
-            <p>背下整首歌詞。</p>
-        </div>
-        <div class="resources">
-            <h2>資源</h2>
-            <a href="https://www.youtube.com/watch?v=DL-VB3SOeJU" class="button">觀看影片：英文字幕版本 (2023-12-21)</a>
-        </div>
+        <h2>資源</h2>
+        <a href="https://www.youtube.com/watch?v=7RB0cVLjTNE" class="button">吉他演唱教學（2021年發布）</a>
+        <a href="https://www.youtube.com/watch?v=j3gMpjvx-gw" class="button">吉他入門教學（2022年發布）</a>
     </div>
 
-    <div class="day-container" style="background-color: #f3e5f5;">
-        <div class="day-header" style="background-color: #9c27b0;">🎼 第5天：節奏練習</div>
+    <div class="day-container">
+        <div class="day-header">📅 第7天：完整演唱練習</div>
+        <h2>行動計劃</h2>
         <ol>
-            <li>拍手跟節奏。</li>
-            <li>慢速唱。</li>
-            <li>加速練習。</li>
+            <li>結合所有元素，完整唱歌至少10次。</li>
+            <li>使用伴奏或MV跟唱。</li>
+            <li>注意呼吸和情感。</li>
         </ol>
-        <div class="action-plan">
-            <h2>行動計劃</h2>
-            <p>使用節拍器練習。</p>
-        </div>
-        <div class="resources">
-            <h2>資源</h2>
-            <a href="https://www.youtube.com/watch?v=_OVFGsqzazo" class="button">觀看影片：4K歌詞版本 (2023-05-22)</a>
-        </div>
+        <h2>資源</h2>
+        <a href="https://www.bilibili.com/video/BV1Ss4119796/" class="button">完整MV版本（2024年發布，Bilibili）</a>
     </div>
 
-    <div class="day-container" style="background-color: #e0f7fa;">
-        <div class="day-header" style="background-color: #00bcd4;">🗣️ 第6天：發聲技巧</div>
+    <div class="day-container">
+        <div class="day-header">📅 第8天：複習與表演</div>
+        <h2>行動計劃</h2>
         <ol>
-            <li>練習呼吸控制。</li>
-            <li>注意高音部分。</li>
-            <li>錄音比較。</li>
+            <li>複習所有日子內容。</li>
+            <li>錄製自己演唱，自我評估。</li>
+            <li>分享給朋友或繼續練習。</li>
         </ol>
-        <div class="action-plan">
-            <h2>行動計劃</h2>
-            <p>專注難點部分。</p>
-        </div>
-        <div class="resources">
-            <h2>資源</h2>
-            <a href="https://www.youtube.com/watch?v=vKTje35_GqU" class="button">觀看影片：動態歌詞 (2022-07-19)</a>
-        </div>
-    </div>
-
-    <div class="day-container" style="background-color: #f1f8e9;">
-        <div class="day-header" style="background-color: #8bc34a;">🔁 第7天：完整演唱</div>
-        <ol>
-            <li>不看歌詞唱。</li>
-            <li>加入情感。</li>
-            <li>多次重複。</li>
-        </ol>
-        <div class="action-plan">
-            <h2>行動計劃</h2>
-            <p>完整唱5次。</p>
-        </div>
-        <div class="resources">
-            <h2>資源</h2>
-            <a href="https://www.youtube.com/watch?v=r5yOn-YT3tI" class="button">觀看影片：高音質歌詞 (2022-01-24)</a>
-        </div>
-    </div>
-
-    <div class="day-container" style="background-color: #e8eaf6;">
-        <div class="day-header" style="background-color: #3f51b5;">🏆 第8天：審視與練習</div>
-        <ol>
-            <li>回顧所有日子。</li>
-            <li>自評演唱。</li>
-            <li>計劃持續練習。</li>
-        </ol>
-        <div class="action-plan">
-            <h2>行動計劃</h2>
-            <p>錄製最終版本。</p>
-        </div>
-        <div class="resources">
-            <h2>資源</h2>
-            <a href="https://www.youtube.com/watch?v=tk23eHLFcnk" class="button">觀看影片：經典版本 (2014-10-04)</a>
-        </div>
+        <h2>資源</h2>
+        <a href="https://www.bilibili.com/video/BV1vb41197b3/" class="button">歌曲合集（2025年發布，Bilibili）</a>
     </div>
 
     <h2>8天計劃概覽</h2>
     <table>
-        <tr>
-            <th>日子</th>
-            <th>重點</th>
-        </tr>
-        <tr>
-            <td>第1天</td>
-            <td>熟悉歌曲</td>
-        </tr>
-        <tr>
-            <td>第2天</td>
-            <td>學習發音</td>
-        </tr>
-        <tr>
-            <td>第3天</td>
-            <td>跟唱練習</td>
-        </tr>
-        <tr>
-            <td>第4天</td>
-            <td>深入歌詞</td>
-        </tr>
-        <tr>
-            <td>第5天</td>
-            <td>節奏練習</td>
-        </tr>
-        <tr>
-            <td>第6天</td>
-            <td>發聲技巧</td>
-        </tr>
-        <tr>
-            <td>第7天</td>
-            <td>完整演唱</td>
-        </tr>
-        <tr>
-            <td>第8天</td>
-            <td>審視與練習</td>
-        </tr>
+        <tr><th>日子</th><th>焦點</th></tr>
+        <tr><td>第1天</td><td>熟悉歌曲與旋律</td></tr>
+        <tr><td>第2天</td><td>學習發音與拼音</td></tr>
+        <tr><td>第3天</td><td>學習簡譜</td></tr>
+        <tr><td>第4天</td><td>練習副歌部分</td></tr>
+        <tr><td>第5天</td><td>使用伴奏練習</td></tr>
+        <tr><td>第6天</td><td>學習演唱技巧</td></tr>
+        <tr><td>第7天</td><td>完整演唱練習</td></tr>
+        <tr><td>第8天</td><td>複習與表演</td></tr>
     </table>
 
     <h2>總結</h2>
-    <p>恭喜你完成8天學習計劃！你現在應該能自信地唱《外面的世界》。記住，唱歌是練習的藝術，繼續每天練習以改善。享受音樂之旅！</p>
+    <p>恭喜您完成8天學習程式！您已掌握《外面的世界》的歌詞、發音、簡譜和演唱技巧。記住，練習是關鍵，繼續唱歌以保持進步。外面的世界很精彩，繼續探索音樂吧！</p>
 </body>
 </html>

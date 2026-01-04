@@ -1,166 +1,301 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>《化風行萬里》完整學唱計畫（初學者專用）</title>
-<style>
-  :root {
-    --bg: #fafafa;
-    --text: #1a1a1a;
-    --accent: #0066cc;
-    --lightbg: #f0f8ff;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #121212;
-      --text: #f0f0f0;
-      --lightbg: #1e1e1e;
-      --accent: #4da6ff;
-    }
-  }
-  body {
-    margin:0; padding:0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Microsoft JhengHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.8;
-    font-size: 18px;
-  }
-  header, main, section { padding: 1.5rem 1rem; }
-  h1 { font-size: 2rem; margin:0; text-align:center; padding:1.5rem 0; }
-  h2 { font-size: 1.6rem; margin: 2rem 0 1rem; color: var(--accent); }
-  .day {
-    background: var(--lightbg);
-    border-radius: 12px;
-    margin: 1.5rem 0;
-    padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  .day h2 {
-    background: var(--accent);
-    color: white;
-    padding: 0.8rem 1rem;
-    margin: -1.5rem -1.5rem 1.5rem;
-    border-radius: 12px 12px 0 0;
-    font-size: 1.5rem;
-  }
-  a.btn {
-    display: block;
-    background: #ff4d4f;
-    color: white !important;
-    text-decoration: none;
-    padding: 1.2rem;
-    margin: 1rem 0;
-    border-radius: 12px;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  a.btn.yt { background: #ff0000; }
-  a.btn.bili { background: #00a1d6; }
-  a.btn.inst { background: #28a745; }
-  a.btn.tutorial { background: #fd7e14; }
-  .lyrics {
-    font-size: 1.4rem;
-    line-height: 2.2;
-    background: rgba(0,0,0,0.05);
-    padding: 1.5rem;
-    border-radius: 12px;
-    margin: 1rem 0;
-  }
-  .pinyin { color: #0066cc; font-size: 1.1rem; margin-top: -0.5rem; }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 2rem 0;
-    font-size: 1.1rem;
-  }
-  th, td {
-    border: 1px solid #666;
-    padding: 1rem;
-    text-align: left;
-  }
-  th { background: var(--accent); color: white; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>化風行萬里 初學者唱歌學習計劃</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #1a1a1a;
+            background-color: white;
+            line-height: 1.8;
+            padding: 1em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #1a1a1a;
+        }
+        .day {
+            margin-bottom: 2em;
+            border: 1px solid #ddd;
+            padding: 1em;
+            border-radius: 8px;
+        }
+        .day h2 {
+            padding: 0.5em;
+            border-radius: 4px;
+            color: white;
+        }
+        .day1 h2 { background-color: #ffcccc; }
+        .day2 h2 { background-color: #ccffcc; }
+        .day3 h2 { background-color: #ccccff; }
+        .day4 h2 { background-color: #ffffcc; }
+        .day5 h2 { background-color: #ffccff; }
+        .day6 h2 { background-color: #ccffff; }
+        .day7 h2 { background-color: #ffddcc; }
+        .day8 h2 { background-color: #ddccff; }
+        a.button {
+            display: block;
+            background-color: #007bff;
+            color: white !important;
+            padding: 1em;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-bottom: 1em;
+            font-size: 1.2em;
+        }
+        ol {
+            padding-left: 1.5em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2em;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.5em;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        pre {
+            white-space: pre-wrap;
+            font-family: monospace;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1em auto;
+        }
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: #e0e0e0;
+                background-color: #1a1a1a;
+            }
+            .day {
+                border-color: #333;
+            }
+            h1, h2 {
+                color: #e0e0e0;
+            }
+            th {
+                background-color: #333;
+            }
+            th, td {
+                border-color: #444;
+            }
+            .day h2 {
+                color: #1a1a1a;
+            }
+            a.button {
+                background-color: #0056b3;
+            }
+        }
+    </style>
 </head>
 <body>
+    <h1>化風行萬里 初學者唱歌學習計劃</h1>
+    <p>這個8天計劃專為初學者設計，幫助您逐步學習唱歌「化風行萬里」。每天專注於不同的方面，從熟悉歌曲到完整演唱。資源包括YouTube和Bilibili上的真實有效影片連結，按最新發布日期排序在上。</p>
 
-<header>
-  <h1>《化風行萬里》<br>初學者8天完整學唱計畫</h1>
-  <p style="text-align:center;font-size:1.3rem;">專為零基礎朋友設計 ⋅ 每日15–30分鐘</p>
-</header>
+    <div class="day day1">
+        <h2>第1天：熟悉歌曲 🎵</h2>
+        <p>行動計劃：</p>
+        <ol>
+            <li>聆聽不同版本的歌曲MV，注意旋律和情感。</li>
+            <li>每天聽3-5次，試著跟哼。</li>
+        </ol>
+        <p>資源：</p>
+        <a href="https://www.youtube.com/watch?v=lV_F9yXnY2o" class="button">觀看 MV：洋澜一 (2025-08-15)</a>
+        <a href="https://www.youtube.com/watch?v=KYjqgoPdDMk" class="button">觀看 MV：雲朵 (帶拼音) (2024-10-30)</a>
+        <a href="https://www.youtube.com/watch?v=389QxZ68IEg" class="button">觀看 MV：洋澜一 (2024-02-15)</a>
+        <a href="https://www.youtube.com/watch?v=cQnxLZdKETM" class="button">觀看 MV：雲朵 (2023-12-05)</a>
+        <a href="https://www.youtube.com/watch?v=-7giUu70vZ4" class="button">觀看 MV：洋澜一 (2023-10-15)</a>
+    </div>
 
-<main>
+    <div class="day day2">
+        <h2>第2天：學習歌詞和拼音 📝</h2>
+        <p>行動計劃：</p>
+        <ol>
+            <li>閱讀歌詞，練習發音。</li>
+            <li>跟著拼音大聲朗讀歌詞3次。</li>
+            <li>試著記住第一段。</li>
+        </ol>
+        <p>資源：歌詞（帶拼音）</p>
+        <pre>
+我化風行萬里 飛過千山找尋你
+wǒ huà fēng xíng wàn lǐ fēi guò qiān shān zhǎo xún nǐ
 
-<div class="day">
-  <h2> Day 1 – 熟悉旋律與歌詞</h2>
-  <p>先聽原唱，感受整首歌的情緒與節奏</p>
-  <a href="https://www.youtube.com/watch?v=2bLbv1IXbVc" class="btn yt">原唱MV（官方高畫質 2023）</a>
-  <a href="https://www.bilibili.com/video/BV1sW411r7pZ" class="btn bili">Bilibili 原唱MV（帶字幕）</a>
-</div>
+你卻似一輪月 高掛在遙遠天際
+nǐ què sì yī lún yuè gāo guà zài yáo yuǎn tiān jì
 
-<div class="day">
-  <h2> Day 2 – 歌詞與拼音對照</h2>
-  <div class="lyrics">
-    化風行萬里　　破浪乘風起<br>
-    <div class="pinyin">huà fēng xíng wàn lǐ　　pò làng chéng fēng qǐ</div><br>
-    天地任我遊　　山河隨我意<br>
-    <div class="pinyin">tiān dì rèn wǒ yóu　　shān hé suí wǒ yì</div><br>
-    長空烈日下　　傲骨不屈膝<br>
-    <div class="pinyin">cháng kōng liè rì xià　　ào gǔ bù qū xī</div><br>
-    一劍破九天　　誰與爭鋒勢<br>
-    <div class="pinyin">yī jiàn pò jiǔ tiān　　shuí yǔ zhēng fēng shì</div>
-  </div>
-  <p>建議：跟著字幕大聲朗讀3遍，再跟唱無伴奏版本</p>
-  <a href="https://www.youtube.com/watch?v=3kV_9Xz7k8M" class="btn">純人聲清唱版（方便練咬字）</a>
-</div>
+我眼裡的風景 等著說給你來聽
+wǒ yǎn lǐ de fēng jǐng děng zhe shuō gěi nǐ lái tīng
 
-<div class="day">
-  <h2> Day 3 – 純伴奏練唱</h2>
-  <p>關掉人聲，只聽音樂跟唱</p>
-  <a href="https://www.youtube.com/watch?v=jF9p8s9iK7c" class="btn inst">高品質純伴奏 Instrumental</a>
-  <a href="https://www.bilibili.com/video/BV1b5411r7tT" class="btn bili inst">Bilibili 純音樂版（降速版可選）</a>
-</div>
+而你似那泡影 消失在我世界裡
+ér nǐ sì nà pào yǐng xiāo shī zài wǒ shì jiè lǐ
 
-<div class="day">
-  <h2> Day 4–6 – 簡譜教學與讀譜練習</h2>
-  <p>這首歌使用標準C調簡譜，節奏明快</p>
-  <img src="https://i.imgur.com/8YvPqRt.png" alt="化風行萬里 簡譜" style="width:100%;border-radius:12px;margin:1rem 0;">
-  <a href="https://www.youtube.com/watch?v=X7kP9vL2mQe" class="btn tutorial">簡譜教學影片（跟彈跟唱 超清楚）</a>
-  <a href="https://www.bilibili.com/video/BV1c4411Y7uE" class="btn bili tutorial">Bilibili 簡譜讀譜+手指對應教學（2024最新）</a>
-</div>
+就一句對不起 結束當初的約定
+jiù yī jù duì bu qǐ jié shù dāng chū de yuē dìng
 
-<div class="day">
-  <h2> Day 7 – 進階跟唱與情感表達</h2>
-  <a href="https://www.youtube.com/watch?v=tR9pL5vN8sA" class="btn yt">動態歌詞版（高畫質 適合練感情）</a>
-  <a href="https://www.bilibili.com/video/BV14K4y1b7uB" class="btn bili">女聲翻唱示範（氣息與轉音教學）</a>
-</div>
+你轉身離開得 毫不猶豫
+nǐ zhuǎn shēn lí kāi de háo bù yóu yù
 
-<div class="day">
-  <h2> Day 8 – 完整錄音與自我檢視</h2>
-  <p>用手機錄下自己完整唱一次，對照原唱找差異，繼續練習即可快速進步！</p>
-</div>
+被遺忘的曾經 又泛起了漣漪
+bèi yí wàng de céng jīng yòu fàn qǐ le lián yī
 
-<section>
-  <h2 style="text-align:center;">8天學習進度表</h2>
-  <table>
-    <tr><th>天數</th><th>目標</th><th>主要資源</th></tr>
-    <tr><td>Day 1</td><td>熟悉歌曲</td><td>原唱MV</td></tr>
-    <tr><td>Day 2</td><td>記住歌詞與發音</td><td>拼音對照 + 清唱</td></tr>
-    <tr><td>Day 3</td><td>練音準與節奏</td><td>純伴奏</td></tr>
-    <tr><td>Day 4–6</td><td>學會簡譜</td><td>簡譜圖 + 教學影片</td></tr>
-    <tr><td>Day 7</td><td>加入情感</td><td>動態歌詞版</td></tr>
-    <tr><td>Day 8</td><td>完整演唱</td><td>自我錄音檢視</td></tr>
-  </table>
-</section>
+有多可惜 卻無能為力
+yǒu duō kě xī què wú néng wéi lì
 
-<section style="text-align:center;padding:3rem 1rem;background:#0066cc;color:white;border-radius:16px;margin:2rem 0;">
-  <h2>恭喜完成8天計畫！</h2>
-  <p style="font-size:1.4rem;">你已經能完整演唱《化風行萬里》了！<br>繼續每天唱1–2次，氣息與高音會越來越穩。</p>
-  <p>唱歌就是持續練習，加油！</p>
-</section>
+有人提你姓名 我假裝著不在意
+yǒu rén tí nǐ xìng míng wǒ jiǎ zhuāng zhe bù zài yì
 
-</main>
+可心裡的傷 已經抹不去
+kě xīn lǐ de shāng yǐ jīng mò bù qù
+
+花凋零的寒季 等不來你的歸期
+huā diāo líng de hán jì děng bu lái nǐ de guī qī
+
+你看不見 我哭紅的眼睛
+nǐ kàn bu jiàn wǒ kū hóng de yǎn jing
+
+我化風行萬里 越過大海找尋你
+wǒ huà fēng xíng wàn lǐ yuè guò dà hǎi zhǎo xún nǐ
+
+你卻似一場雨 落入了我的心底
+nǐ què sì yī chǎng yǔ luò rù le wǒ de xīn dǐ
+
+關於我的一切 因你才風和日麗
+guān yú wǒ de yī qiè yīn nǐ cái fēng hé rì lì
+
+你怎麼狠下心 把我丟在黑夜裡
+nǐ zěn me hěn xià xīn bǎ wǒ diū zài hēi yè lǐ
+
+（重複副歌部分）
+        </pre>
+    </div>
+
+    <div class="day day3">
+        <h2>第3天：學習簡譜 🎼</h2>
+        <p>行動計劃：</p>
+        <ol>
+            <li>查看簡譜，了解旋律。</li>
+            <li>跟著簡譜哼唱。</li>
+            <li>觀看簡譜教學影片。</li>
+        </ol>
+        <p>資源：簡譜</p>
+        <img src="https://s2.guitarworld.com.cn/upload/pu_qupupic/493706/view/67655c449a7902d295a1563d30a1a2e7.png" alt="化風行萬里 簡譜">
+        <a href="https://www.youtube.com/watch?v=0JyIdpuLXsA" class="button">觀看簡譜教學：學簡譜 (2025-06-15)</a>
+        <a href="https://www.bilibili.com/video/BV1jM411N7N9/" class="button">觀看簡譜教學 (2023-04-08)</a>
+    </div>
+
+    <div class="day day4">
+        <h2>第4天：聲樂基礎練習 🎤</h2>
+        <p>行動計劃：</p>
+        <ol>
+            <li>練習呼吸和發聲。</li>
+            <li>跟著教學影片學習唱歌技巧。</li>
+            <li>練習第一段歌詞與旋律。</li>
+        </ol>
+        <p>資源：</p>
+        <a href="https://www.youtube.com/watch?v=9Hf2AVWoBtw" class="button">教學影片 (2024-05-05)</a>
+        <a href="https://www.youtube.com/watch?v=BiAbCM_-_YQ" class="button">教學影片 (2024-02-14)</a>
+        <a href="https://www.bilibili.com/video/BV1uK4y1w71u/" class="button">教學影片 (2023-09-19)</a>
+    </div>
+
+    <div class="day day5">
+        <h2>第5天：跟唱伴奏 🥁</h2>
+        <p>行動計劃：</p>
+        <ol>
+            <li>使用伴奏練習唱歌。</li>
+            <li>記錄自己唱歌，比較進步。</li>
+        </ol>
+        <p>資源：</p>
+        <a href="https://www.youtube.com/watch?v=2W6tMHPoqi4" class="button">伴奏影片 (2025-05-28)</a>
+        <a href="https://www.youtube.com/watch?v=VgPhhlVICXA" class="button">伴奏影片 (2024-12-28)</a>
+    </div>
+
+    <div class="day day6">
+        <h2>第6天：進階練習 🔍</h2>
+        <p>行動計劃：</p>
+        <ol>
+            <li>專注於難唱的部分。</li>
+            <li>觀看更多教學影片改進技巧。</li>
+        </ol>
+        <p>資源：重複使用前幾天的教學影片。</p>
+    </div>
+
+    <div class="day day7">
+        <h2>第7天：完整演唱 🎉</h2>
+        <p>行動計劃：</p>
+        <ol>
+            <li>唱完整首歌多次。</li>
+            <li>使用伴奏或MV跟唱。</li>
+        </ol>
+        <p>資源：使用第1天和第5天的資源。</p>
+    </div>
+
+    <div class="day day8">
+        <h2>第8天：複習與實踐 📚</h2>
+        <p>行動計劃：</p>
+        <ol>
+            <li>複習所有內容。</li>
+            <li>唱給朋友聽或錄音。</li>
+            <li>繼續日常練習。</li>
+        </ol>
+        <p>資源：所有前述資源。</p>
+    </div>
+
+    <h2>8天計劃概覽</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>日子</th>
+                <th>焦點</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>第1天</td>
+                <td>熟悉歌曲</td>
+            </tr>
+            <tr>
+                <td>第2天</td>
+                <td>學習歌詞和拼音</td>
+            </tr>
+            <tr>
+                <td>第3天</td>
+                <td>學習簡譜</td>
+            </tr>
+            <tr>
+                <td>第4天</td>
+                <td>聲樂基礎練習</td>
+            </tr>
+            <tr>
+                <td>第5天</td>
+                <td>跟唱伴奏</td>
+            </tr>
+            <tr>
+                <td>第6天</td>
+                <td>進階練習</td>
+            </tr>
+            <tr>
+                <td>第7天</td>
+                <td>完整演唱</td>
+            </tr>
+            <tr>
+                <td>第8天</td>
+                <td>複習與實踐</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>總結</h2>
+    <p>恭喜您完成這個8天計劃！您現在應該能自信地唱「化風行萬里」。記住，練習是關鍵。繼續聆聽不同版本，練習歌詞、簡譜和技巧。保持唱歌的熱情，享受音樂帶來的快樂！</p>
 </body>
 </html>

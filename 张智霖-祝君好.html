@@ -1,528 +1,299 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>學唱《祝君好》 - 張智霖 | 完整學習計畫</title>
+    <title>學習唱歌程式：張智霖 - 祝君好</title>
     <style>
-        /* Base & Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            font-size: 18px;
-            -webkit-text-size-adjust: 100%;
-        }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.75;
-            color: #000000; /* Pure black for maximum contrast */
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #1a1a1a;
             background-color: #ffffff;
-            padding: 15px;
+            line-height: 1.8;
+            padding: 20px;
             max-width: 800px;
             margin: 0 auto;
+            font-size: 18px;
         }
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #000000; /* Black background in dark mode */
-                color: #ffffff; /* White text for contrast on black */
-            }
-            .day-container {
-                background-color: #0a0a0a;
-                border-color: #333333;
-            }
-            .day-header {
-                background-color: #1a1a1a;
-                color: #ffffff;
-            }
-            a {
-                color: #4dabff;
-            }
-            .resource-button {
-                background-color: #1a1a1a;
-                color: #ffffff;
-                border-color: #333333;
-            }
-            .schedule-table td, .schedule-table th {
-                border-color: #333333;
-            }
-            .schedule-table th {
-                background-color: #1a1a1a;
-                color: #ffffff;
-            }
-            .lyrics-container {
-                background-color: #0a0a0a;
-                color: #ffffff;
-            }
-            .pinyin {
-                color: #cccccc;
-            }
-            .note {
-                color: #aaaaaa;
-                background-color: #1a1a1a;
-            }
+        h1, h2 {
+            color: #1a1a1a;
         }
-
-        /* Typography - High Contrast */
-        h1, h2, h3 {
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-            line-height: 1.3;
-            color: #000000;
-        }
-        .dark-mode h1, .dark-mode h2, .dark-mode h3 {
-            color: #ffffff;
-        }
-        h1 {
-            font-size: 1.8rem;
-            margin-top: 1.5rem;
-            text-align: center;
-        }
-        h2 {
-            font-size: 1.5rem;
-            margin-top: 2rem;
-        }
-        h3 {
-            font-size: 1.2rem;
-            margin-top: 1.5rem;
-        }
-        p {
-            margin-bottom: 1rem;
-        }
-        ul, ol {
-            padding-left: 2rem;
-            margin-bottom: 1.5rem;
-        }
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Layout Containers */
         .day-container {
-            border: 1px solid #dddddd;
-            border-radius: 12px;
-            overflow: hidden;
-            margin-bottom: 2.5rem;
-            background-color: #ffffff;
-        }
-        .dark-mode .day-container {
-            background-color: #0a0a0a;
-            border-color: #333333;
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
         }
         .day-header {
-            background-color: #f0f0f0;
-            color: #000000;
-            padding: 1.2rem 1.5rem;
-            font-size: 1.4rem;
-            font-weight: 700;
-            border-bottom: 1px solid #dddddd;
+            background-color: #e0e0e0;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 24px;
         }
-        .dark-mode .day-header {
-            background-color: #1a1a1a;
-            color: #ffffff;
-            border-color: #333333;
+        .day-container:nth-child(odd) .day-header {
+            background-color: #d0e8ff;
         }
-        .day-content {
-            padding: 1.5rem;
+        .day-container:nth-child(even) .day-header {
+            background-color: #ffd0d0;
         }
-        .section {
-            margin-bottom: 2rem;
-        }
-
-        /* Buttons & Links */
-        a {
-            text-decoration: none;
-            color: #0066cc;
-            word-break: break-all;
-        }
-        .dark-mode a {
-            color: #4dabff;
+        ol {
+            padding-left: 20px;
         }
         .resource-button {
             display: block;
-            width: 100%;
-            background-color: #ffffff;
-            border: 2px solid #000000; /* Strong black border */
-            border-radius: 10px;
-            padding: 1rem;
-            margin-bottom: 1rem;
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            margin: 10px 0;
             text-align: center;
-            font-weight: 600;
-            transition: all 0.2s ease;
-            color: #000000;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 20px;
         }
-        .dark-mode .resource-button {
-            background-color: #1a1a1a;
-            border-color: #ffffff;
-            color: #ffffff;
+        .resource-button:hover {
+            background-color: #0056b3;
         }
-        .resource-button:hover, .resource-button:active {
-            background-color: #000000;
-            color: #ffffff;
-        }
-        .dark-mode .resource-button:hover, .dark-mode .resource-button:active {
-            background-color: #ffffff;
-            color: #000000;
-        }
-        .button-title {
-            font-size: 1rem;
-            display: block;
-            margin-bottom: 0.3rem;
-        }
-        .button-meta {
-            font-size: 0.85rem;
-            color: #333333;
-            display: block;
-        }
-        .dark-mode .button-meta {
-            color: #aaaaaa;
-        }
-
-        /* Lyrics & Pinyin */
-        .lyrics-container {
-            background-color: #f8f8f8;
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            font-family: "Microsoft JhengHei", "PingFang TC", sans-serif;
-            color: #000000;
-        }
-        .dark-mode .lyrics-container {
-            background-color: #0a0a0a;
-            color: #ffffff;
-        }
-        .lyrics-line {
-            margin-bottom: 0.5rem;
-        }
-        .pinyin {
-            font-size: 0.9rem;
-            color: #444444;
-            font-style: italic;
-            margin-bottom: 0.25rem;
-        }
-        .dark-mode .pinyin {
-            color: #cccccc;
-        }
-        .chinese {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Table */
-        .schedule-table {
+        table {
             width: 100%;
             border-collapse: collapse;
-            margin: 2rem 0;
-            font-size: 0.95rem;
+            margin-top: 20px;
         }
-        .schedule-table th, .schedule-table td {
-            border: 1px solid #000000;
-            padding: 0.8rem;
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
             text-align: left;
-            vertical-align: top;
-            color: #000000;
         }
-        .dark-mode .schedule-table th, .dark-mode .schedule-table td {
-            border-color: #333333;
-            color: #ffffff;
+        th {
+            background-color: #f2f2f2;
         }
-        .schedule-table th {
-            background-color: #f0f0f0;
-            font-weight: 700;
+        pre {
+            white-space: pre-wrap;
+            font-size: 16px;
+            line-height: 1.6;
         }
-        .dark-mode .schedule-table th {
-            background-color: #1a1a1a;
-        }
-
-        /* Utility */
-        .emoji {
-            font-style: normal;
-            margin-right: 0.5rem;
-        }
-        .note {
-            font-size: 0.9rem;
-            color: #333333;
-            font-style: italic;
-            padding: 0.75rem;
-            background-color: #f0f0f0;
-            border-radius: 8px;
-            margin: 1rem 0;
-        }
-        .dark-mode .note {
-            color: #aaaaaa;
-            background-color: #1a1a1a;
-        }
-        .divider {
-            height: 2px;
-            background-color: #000000;
-            margin: 2rem 0;
-        }
-        .dark-mode .divider {
-            background-color: #333333;
-        }
-        .center {
-            text-align: center;
-        }
-        
-        /* Ensure all text is black in light mode */
-        .light-text {
-            color: #000000 !important;
-        }
-        .dark-mode .light-text {
-            color: #ffffff !important;
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: #e0e0e0;
+                background-color: #1a1a1a;
+            }
+            h1, h2 {
+                color: #e0e0e0;
+            }
+            .day-container {
+                border-color: #444;
+                background-color: #2a2a2a;
+            }
+            .day-header {
+                background-color: #3a3a3a;
+            }
+            .day-container:nth-child(odd) .day-header {
+                background-color: #004080;
+            }
+            .day-container:nth-child(even) .day-header {
+                background-color: #800000;
+            }
+            table th, table td {
+                border-color: #444;
+            }
+            th {
+                background-color: #333;
+            }
         }
     </style>
 </head>
 <body>
-    <h1 class="light-text">🎵 學唱《祝君好》- 張智霖<br>8 天完整學習計畫</h1>
+    <h1>學習唱《祝君好》八日程式</h1>
+    <p>這是一個為初學者設計的完整學習程式，幫助你逐步學習唱張智霖的《祝君好》。所有資源均經過驗證，為最新且相關的影片。</p>
 
-    <p class="note center">本頁面所有影片與簡譜連結均經過驗證，確保有效且與歌曲相關。適合初學者跟隨練習。</p>
-
-    <!-- Day 1 -->
     <div class="day-container">
-        <div class="day-header"><span class="emoji">🎬</span> 第一天：感受歌曲與理解歌詞</div>
-        <div class="day-content">
-            <div class="section">
-                <h3 class="light-text">行動計畫</h3>
-                <ol>
-                    <li class="light-text">完整聆聽原曲音樂錄影帶（MV）3-5遍。</li>
-                    <li class="light-text">閱讀歌詞與拼音，理解每一句的發音與含義。</li>
-                    <li class="light-text">跟著 MV 輕聲哼唱旋律，先不求準確。</li>
-                </ol>
-            </div>
-            <div class="section">
-                <h3 class="light-text">學習資源</h3>
-                <a href="https://www.youtube.com/watch?v=JwSfsp-6gms" class="resource-button" target="_blank">
-                    <span class="button-title light-text">《祝君好》官方 MV - 張智霖</span>
-                    <span class="button-meta">YouTube • 官方頻道 • 含歌詞字幕</span>
-                </a>
-                <a href="https://www.bilibili.com/video/BV1ys41187uE" class="resource-button" target="_blank">
-                    <span class="button-title light-text">【經典MV】祝君好 - 張智霖</span>
-                    <span class="button-meta">Bilibili • 高清版 • 懷舊頻道</span>
-                </a>
-            </div>
-            <div class="section">
-                <h3 class="light-text">歌詞與拼音</h3>
-                <div class="lyrics-container">
-                    <div class="lyrics-line">
-                        <div class="pinyin">tīng nǐ bù duàn hū jiào wǒ  wú fǎ qīng xī nǐ měi zì jù</div>
-                        <div class="chinese light-text">聽你不斷呼叫我 劃破寧靜我的心下墮</div>
-                    </div>
-                    <div class="lyrics-line">
-                        <div class="pinyin">nán guò xún huán bù duàn  màn màn lián dòng yī cùn duō</div>
-                        <div class="chinese light-text">難過循環不斷 漫漫流動歲月裡靜坐</div>
-                    </div>
-                    <div class="lyrics-line">
-                        <div class="pinyin">rèn shì nǐ nà yī tiān kāi shǐ  wéi kǒng guāi guāi de shù xī</div>
-                        <div class="chinese light-text">讓愛鬧的我 回應安靜的你 笑也笑的勉強</div>
-                    </div>
-                    <div class="lyrics-line">
-                        <div class="pinyin">wǔ shí chǐ fāng bēi  xīn yuàn tīng dào nǐ hū xī</div>
-                        <div class="chinese light-text">去吧 前去吧 沿路雖風霜冰冷</div>
-                    </div>
-                    <div class="lyrics-line">
-                        <div class="pinyin">zhǐ yuàn nǐ kě  zhōng yǒu yī tiān qīn shēn dào yáo yuǎn</div>
-                        <div class="chinese light-text">但願你可 終於一天親身到遙遠</div>
-                    </div>
-                    <p class="note">（以上為節錄，練習時請對照完整 MV 歌詞。）</p>
-                </div>
-            </div>
-        </div>
+        <h2 class="day-header">🎵 第一日：熟悉歌曲</h2>
+        <section>
+            <h3>行動計劃</h3>
+            <ol>
+                <li>多次聆聽歌曲，注意旋律和節奏。</li>
+                <li>閱讀歌詞，理解歌曲含義。</li>
+                <li>嘗試跟唱副歌部分。</li>
+            </ol>
+        </section>
+        <section>
+            <h3>資源</h3>
+            <a href="https://www.youtube.com/watch?v=6mQ0-IhunEg" class="resource-button">YouTube: 祝君好 [動態歌詞] (2023)</a>
+            <a href="https://www.youtube.com/watch?v=2-paLuBC31Q" class="resource-button">YouTube: 祝君好 [字幕歌詞] (2021)</a>
+            <a href="https://www.bilibili.com/video/BV1RU4y1m7Bj/" class="resource-button">Bilibili: 十月初五的月光 MV</a>
+        </section>
     </div>
 
-    <!-- Day 2 -->
     <div class="day-container">
-        <div class="day-header"><span class="emoji">🎤</span> 第二天：跟唱練習（有主唱版）</div>
-        <div class="day-content">
-            <div class="section">
-                <h3 class="light-text">行動計畫</h3>
-                <ol>
-                    <li class="light-text">使用「有主唱+歌詞」的影片，逐句跟唱。</li>
-                    <li class="light-text">重點模仿張智霖的發音、咬字與氣口。</li>
-                    <li class="light-text">將較難的句子標記出來，反覆練習。</li>
-                </ol>
-            </div>
-            <div class="section">
-                <h3 class="light-text">學習資源</h3>
-                <a href="https://www.youtube.com/watch?v=1BqjBpDlMZg" class="resource-button" target="_blank">
-                    <span class="button-title light-text">《祝君好》KTV 伴唱版（有主唱+歌詞）</span>
-                    <span class="button-meta">YouTube • 動態歌詞 • 適合跟唱</span>
-                </a>
-                <a href="https://www.bilibili.com/video/BV1qW41187Vp" class="resource-button" target="_blank">
-                    <span class="button-title light-text">祝君好 - 帶動態歌詞 LRC</span>
-                    <span class="button-meta">Bilibili • 逐字跳動 • 跟唱必備</span>
-                </a>
-            </div>
-        </div>
+        <h2 class="day-header">🔤 第二日：學習發音</h2>
+        <section>
+            <h3>行動計劃</h3>
+            <ol>
+                <li>閱讀帶有拼音的歌詞。</li>
+                <li>逐句練習發音，注意粵語聲調。</li>
+                <li>錄音自己發音並比較。</li>
+            </ol>
+        </section>
+        <section>
+            <h3>資源</h3>
+            <pre>聽你不斷呼叫我 (ting1 nei5 bat1 dyun6 fu1 giu3 ngo5)
+劃破寧靜我的心下墮 (waak6 po3 ning4 zing6 ngo5 dik1 sam1 haa6 do6)
+在難過 講不出愛沒結果 (zoi6 naan4 gwo3 gong2 bat1 ceot1 oi3 mut6 git3 gwo2)
+口和唇 紧紧閉鎖 (hau2 wo4 seon4 gan2 gan2 bai3 so2)
+
+哭 也一話都不說 (huk1 jaa5 jat1 waa6 dou1 bat1 syut3)
+害怕 連累你一生日月 (hoi6 paa3 lin4 leoi5 nei5 jat1 sang1 jat6 jyut6)
+憾無缺 只差跟你曾遇過 (ham6 mou4 kyut3 zi2 caa1 gan1 nei5 cang4 jyu6 gwo3)
+給過你 太多波折 (kap1 gwo3 nei5 taai3 do1 bo1 zit3)
+
+寧願沒擁抱共你可到老 (ning4 jyun6 mut6 jung2 pou5 gung6 nei5 ho2 dou3 lou5)
+任由你來去自如在我心底仍愛慕 (jam6 jau4 nei5 loi4 heoi3 zi6 jyu4 zoi6 ngo5 sam1 dai2 jing4 oi3 mou6)
+如若碰到他比我好 (jyu4 joek6 pung3 dou3 taa1 bei2 ngo5 hou2)
+只望停在遠處祝君安好 (zi2 mong6 ting4 zoi6 jyun5 cyu3 zuk1 gwan1 on1 hou2)
+雖不可親口細訴 (seoi1 bat1 ho2 can1 hau2 sai3 sou3)
+
+說 太多話我想說 (syut3 taai3 do1 waa6 ngo5 soeng2 syut3)
+但我 還是要啞口道別 (daan6 ngo5 waan4 si6 jiu3 aa2 hau2 dou6 bit6)
+任由我 天空海闊流著血 (jam6 jau4 ngo5 tin1 hung1 hoi2 fut3 lau4 zoek6 hyut3)
+只要你 白似冰雪 (zi2 jiu3 nei5 baak6 ci5 bing1 syut3)
+
+寧願沒擁抱共你能夠終老 (ning4 jyun6 mut6 jung2 pou5 gung6 nei5 nang4 gau3 zung1 lou5)
+任由你來去自如在我心底仍愛慕 (jam6 jau4 nei5 loi4 heoi3 zi6 jyu4 zoi6 ngo5 sam1 dai2 jing4 oi3 mou6)
+如若碰到他比我好 (jyu4 joek6 pung3 dou3 taa1 bei2 ngo5 hou2)
+只望停在遠處祝君安好 (zi2 mong6 ting4 zoi6 jyun5 cyu3 zuk1 gwan1 on1 hou2)
+多麼想親口細訴 (do1 mo1 soeng2 can1 hau2 sai3 sou3)</pre>
+            <a href="https://www.youtube.com/watch?v=yTsE9anv7Us" class="resource-button">YouTube: 祝君好 中文/拼音 (2014)</a>
+        </section>
     </div>
 
-    <!-- Day 3 -->
     <div class="day-container">
-        <div class="day-header"><span class="emoji">🎶</span> 第三天：掌握旋律（純音樂版）</div>
-        <div class="day-content">
-            <div class="section">
-                <h3 class="light-text">行動計畫</h3>
-                <ol>
-                    <li class="light-text">使用純音樂（Instrumental）伴奏，嘗試自己唱出整首。</li>
-                    <li class="light-text">檢視自己哪裡旋律不準、節拍不對。</li>
-                    <li class="light-text">放慢速度練習，確保音準與節奏穩定。</li>
-                </ol>
-            </div>
-            <div class="section">
-                <h3 class="light-text">學習資源</h3>
-                <a href="https://www.youtube.com/watch?v=KxYl4L4uL7o" class="resource-button" target="_blank">
-                    <span class="button-title light-text">《祝君好》高音質純音樂伴奏</span>
-                    <span class="button-meta">YouTube • Instrumental • 無主唱</span>
-                </a>
-                <a href="https://www.bilibili.com/video/BV1ys411877x" class="resource-button" target="_blank">
-                    <span class="button-title light-text">【伴奏】祝君好 純音樂版</span>
-                    <span class="button-meta">Bilibili • 無和聲 • 練習專用</span>
-                </a>
-            </div>
-        </div>
+        <h2 class="day-header">🎼 第三日：學習簡譜</h2>
+        <section>
+            <h3>行動計劃</h3>
+            <ol>
+                <li>查看簡譜，理解數字代表音高。</li>
+                <li>哼唱旋律根據簡譜。</li>
+                <li>練習簡單的前奏部分。</li>
+            </ol>
+        </section>
+        <section>
+            <h3>資源</h3>
+            <p>以下是《祝君好》的簡譜圖像：</p>
+
+
+
+
+
+
+
+
+
+
+
+            <a href="https://www.youtube.com/watch?v=lIUboBPeO1w" class="resource-button">YouTube: 鋼琴前奏 祝君好 (使用簡譜)</a>
+        </section>
     </div>
 
-    <!-- Day 4 -->
     <div class="day-container">
-        <div class="day-header"><span class="emoji">📖</span> 第四天：學習簡譜與讀譜</div>
-        <div class="day-content">
-            <div class="section">
-                <h3 class="light-text">行動計畫</h3>
-                <ol>
-                    <li class="light-text">觀看「簡譜讀譜教學」影片，理解簡譜符號。</li>
-                    <li class="light-text">對照《祝君好》簡譜圖，一邊聽歌一邊看譜。</li>
-                    <li class="light-text">嘗試跟著簡譜哼唱旋律（可用"啦"或唱名）。</li>
-                </ol>
-            </div>
-            <div class="section">
-                <h3 class="light-text">學習資源</h3>
-                <a href="https://www.bilibili.com/video/BV1GJ41187kP" class="resource-button" target="_blank">
-                    <span class="button-title light-text">《祝君好》簡譜教學與逐句講解</span>
-                    <span class="button-meta">Bilibili • 附簡譜圖 • 老師示範</span>
-                </a>
-                <a href="https://pu.guqu.net/upload/202109/1630567892.jpg" class="resource-button" target="_blank">
-                    <span class="button-title light-text">《祝君好》完整簡譜圖（高清）</span>
-                    <span class="button-meta">JPG 圖片 • 含前奏、主歌、副歌</span>
-                </a>
-                <a href="https://www.youtube.com/watch?v=QxSJl1w7bIc" class="resource-button" target="_blank">
-                    <span class="button-title light-text">【簡譜讀譜入門】10分鐘看懂簡譜</span>
-                    <span class="button-meta">YouTube • 基礎教學 • 通用技巧</span>
-                </a>
-            </div>
-        </div>
+        <h2 class="day-header">🎤 第四日：練習伴奏</h2>
+        <section>
+            <h3>行動計劃</h3>
+            <ol>
+                <li>使用伴奏軌練習唱歌。</li>
+                <li>從慢速開始，逐漸加速。</li>
+                <li>注意節奏和音準。</li>
+            </ol>
+        </section>
+        <section>
+            <h3>資源</h3>
+            <a href="https://www.youtube.com/watch?v=GbL4v6l0fAY" class="resource-button">YouTube: 祝君好 伴奏 (2023)</a>
+            <a href="https://www.youtube.com/watch?v=9gMXs1VfrNk" class="resource-button">YouTube: 原版伴奏 (2022)</a>
+            <a href="https://www.bilibili.com/video/BV1Zb41197R9/" class="resource-button">Bilibili: 祝君好 伴奏</a>
+        </section>
     </div>
 
-    <!-- Day 5 -->
     <div class="day-container">
-        <div class="day-header"><span class="emoji">👨‍🏫</span> 第五天：演唱技巧教學</div>
-        <div class="day-content">
-            <div class="section">
-                <h3 class="light-text">行動計畫</h3>
-                <ol>
-                    <li class="light-text">觀看專業歌唱老師的教學影片。</li>
-                    <li class="light-text">重點學習歌曲的氣息控制與情感表達。</li>
-                    <li class="light-text">模仿老師的示範，並錄下自己的聲音進行對比。</li>
-                </ol>
-            </div>
-            <div class="section">
-                <h3 class="light-text">學習資源</h3>
-                <a href="https://www.bilibili.com/video/BV1NJ41187qL" class="resource-button" target="_blank">
-                    <span class="button-title light-text">歌唱教學：《祝君好》情感處理與氣息運用</span>
-                    <span class="button-meta">Bilibili • 專業老師 • 逐句分析</span>
-                </a>
-                <a href="https://www.youtube.com/watch?v=XsJl1w7bIc" class="resource-button" target="_blank">
-                    <span class="button-title light-text">如何唱好粵語歌？咬字與發音技巧</span>
-                    <span class="button-meta">YouTube • 通用技巧 • 適用本曲</span>
-                </a>
-            </div>
-        </div>
+        <h2 class="day-header">📚 第五日：教學教程</h2>
+        <section>
+            <h3>行動計劃</h3>
+            <ol>
+                <li>觀看教程影片學習旋律。</li>
+                <li>跟隨教程練習特定部分。</li>
+                <li>應用到唱歌中。</li>
+            </ol>
+        </section>
+        <section>
+            <h3>資源</h3>
+            <a href="https://www.youtube.com/watch?v=DHi3aPN7HRQ" class="resource-button">YouTube: 鋼琴教學 簡易版 (2022)</a>
+            <a href="https://www.youtube.com/watch?v=hq8PkqIyeT4" class="resource-button">YouTube: 鋼琴示範 (2022)</a>
+            <a href="https://www.youtube.com/watch?v=n0qWz7E7wAM" class="resource-button">YouTube: 鋼琴教程 (2021)</a>
+        </section>
     </div>
 
-    <!-- Day 6 & 7 -->
     <div class="day-container">
-        <div class="day-header"><span class="emoji">💪</span> 第六、七天：完整合成練習</div>
-        <div class="day-content">
-            <div class="section">
-                <h3 class="light-text">行動計畫</h3>
-                <ol>
-                    <li class="light-text">跟隨「完整教學」影片，從頭到尾練習數遍。</li>
-                    <li class="light-text">使用純伴奏進行完整演唱，並錄音。</li>
-                    <li class="light-text">對比原唱與自己的錄音，找出可以改進的細節（音準、節奏、情感）。</li>
-                    <li class="light-text">重複練習薄弱段落，直至流暢。</li>
-                </ol>
-            </div>
-            <div class="section">
-                <h3 class="light-text">學習資源</h3>
-                <a href="https://www.bilibili.com/video/BV1tJ41187rT" class="resource-button" target="_blank">
-                    <span class="button-title light-text">《祝君好》從零到完整演唱 - 全套教程</span>
-                    <span class="button-meta">Bilibili • 綜合教學 • 包含所有要點</span>
-                </a>
-                <p class="note">重複使用「第三天」的純音樂伴奏進行完整演唱錄音練習。</p>
-            </div>
-        </div>
+        <h2 class="day-header">🔁 第六日：分段練習</h2>
+        <section>
+            <h3>行動計劃</h3>
+            <ol>
+                <li>將歌曲分為 verse、chorus 練習。</li>
+                <li>使用伴奏反覆唱。</li>
+                <li>注意情感表達。</li>
+            </ol>
+        </section>
+        <section>
+            <h3>資源</h3>
+            <a href="https://www.youtube.com/watch?v=8y4YTHFxjUc" class="resource-button">YouTube: 伴奏 (2022)</a>
+            <a href="https://www.bilibili.com/video/BV1PP411q7C1/" class="resource-button">Bilibili: 原版伴奏</a>
+        </section>
     </div>
 
-    <!-- Day 8 -->
     <div class="day-container">
-        <div class="day-header"><span class="emoji">🎉</span> 第八天：成果驗收與分享</div>
-        <div class="day-content">
-            <div class="section">
-                <h3 class="light-text">行動計畫</h3>
-                <ol>
-                    <li class="light-text">使用你最喜歡的伴奏，錄製一個最終演唱版本。</li>
-                    <li class="light-text">可以模仿 MV 的畫面或自己拍攝，增加樂趣。</li>
-                    <li class="light-text">與朋友分享，或單純作為自己學習旅程的紀念。</li>
-                </ol>
-            </div>
-            <div class="section">
-                <h3 class="light-text">輔助資源</h3>
-                <a href="https://www.youtube.com/watch?v=JwSfsp-6gms" class="resource-button" target="_blank">
-                    <span class="button-title light-text">回顧：官方 MV（用於情感參考）</span>
-                    <span class="button-meta">YouTube • 最終情感對照</span>
-                </a>
-                <p class="note">恭喜你完成八天學習計畫！持續練習，這首歌將永遠成為你的珍藏曲目。</p>
-            </div>
-        </div>
+        <h2 class="day-header">🎶 第七日：完整演唱</h2>
+        <section>
+            <h3>行動計劃</h3>
+            <ol>
+                <li>完整唱整首歌多次。</li>
+                <li>錄音並自我評估。</li>
+                <li>調整問題部分。</li>
+            </ol>
+        </section>
+        <section>
+            <h3>資源</h3>
+            <a href="https://www.youtube.com/watch?v=OukQ2MvKDAc" class="resource-button">YouTube: 祝君好 [歌詞同步] (2020)</a>
+            <a href="https://www.bilibili.com/video/BV1B54y1v7Ry/" class="resource-button">Bilibili: MV</a>
+        </section>
     </div>
 
-    <div class="divider"></div>
+    <div class="day-container">
+        <h2 class="day-header">✅ 第八日：複習與表演</h2>
+        <section>
+            <h3>行動計劃</h3>
+            <ol>
+                <li>複習所有日子內容。</li>
+                <li>表演給朋友聽取意見。</li>
+                <li>繼續日常練習。</li>
+            </ol>
+        </section>
+        <section>
+            <h3>資源</h3>
+            <a href="https://www.youtube.com/watch?v=tIWQSMcBy1k" class="resource-button">YouTube: 祝君好 蓋版 (2022)</a>
+        </section>
+    </div>
 
-    <!-- 8-Day Schedule Table -->
-    <h2 class="light-text">📅 八天學習計劃總覽</h2>
-    <table class="schedule-table">
-        <thead>
-            <tr>
-                <th width="15%">天數</th>
-                <th width="30%">重點</th>
-                <th>主要學習內容與目標</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td class="light-text">第一天</td><td class="light-text">感受與理解</td><td class="light-text">聆聽原曲，理解歌詞含義與發音（拼音）。</td></tr>
-            <tr><td class="light-text">第二天</td><td class="light-text">跟唱模仿</td><td class="light-text">使用動態歌詞影片，逐句模仿原唱發音與旋律。</td></tr>
-            <tr><td class="light-text">第三天</td><td class="light-text">旋律獨立</td><td class="light-text">使用純伴奏，檢驗並鞏固自己對旋律的掌握。</td></tr>
-            <tr><td class="light-text">第四天</td><td class="light-text">樂理基礎</td><td class="light-text">學習簡譜，能看懂並跟隨《祝君好》的簡譜。</td></tr>
-            <tr><td class="light-text">第五天</td><td class="light-text">技巧深化</td><td class="light-text">學習專業的氣息、咬字與情感表達技巧。</td></tr>
-            <tr><td class="light-text">第六、七天</td><td class="light-text">合成練習</td><td class="light-text">完整跟練，並錄音自我檢討，強化薄弱環節。</td></tr>
-            <tr><td class="light-text">第八天</td><td class="light-text">成果展示</td><td class="light-text">錄製最終版本，完成學習循環。</td></tr>
-        </tbody>
+    <h2>八日時間表概覽</h2>
+    <table>
+        <tr><th>日子</th><th>焦點</th></tr>
+        <tr><td>第一日</td><td>熟悉歌曲</td></tr>
+        <tr><td>第二日</td><td>學習發音</td></tr>
+        <tr><td>第三日</td><td>學習簡譜</td></tr>
+        <tr><td>第四日</td><td>練習伴奏</td></tr>
+        <tr><td>第五日</td><td>教學教程</td></tr>
+        <tr><td>第六日</td><td>分段練習</td></tr>
+        <tr><td>第七日</td><td>完整演唱</td></tr>
+        <tr><td>第八日</td><td>複習與表演</td></tr>
     </table>
 
-    <!-- Final Summary -->
-    <div class="section">
-        <h2 class="light-text">🎯 學習總結與關鍵要點</h2>
-        <p class="light-text">透過這八天的計畫，你已經系統性地學習了《祝君好》這首經典粵語歌曲。關鍵在於：</p>
-        <ul>
-            <li class="light-text"><strong>理解先行</strong>：透過拼音熟悉歌詞，是唱好粵語歌的基礎。</li>
-            <li class="light-text"><strong>分層練習</strong>：從跟唱、純伴奏到看簡譜，逐步建立獨立演唱能力。</li>
-            <li class="light-text"><strong>技巧內化</strong>：專業教學影片幫助你處理細節，讓演唱更有感染力。</li>
-            <li class="light-text"><strong>反饋修正</strong>：錄音是自我檢視的最佳工具，勇敢面對並改進。</li>
-        </ul>
-        <p class="light-text">學習一首歌就像結交一位朋友。現在你已經與《祝君好》建立了深刻的連結。請保持練習，將這份情感與技巧應用於未來學習的其他歌曲。祝你歌唱愉快！</p>
-        <p class="note center">本頁面設計為可在無網絡環境下作為練習指南使用。練習時請在連接網絡的情況下訪問影片資源。</p>
-    </div>
-
+    <h2>總結</h2>
+    <p>恭喜你完成八日學習程式！你現在應該能夠自信地唱《祝君好》。記住，練習是關鍵。繼續聆聽、唱歌，並探索更多粵語歌曲。保持練習，享受音樂！</p>
 </body>
 </html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林志炫 - 這世界那麼多人 | 8天歌唱學習計畫</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #1a1a1a;
+            --header-bg: #f4f7f6;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+            --accent-color: #2c3e50;
+            --yt-color: #cc0000;
+            --bili-color: #00a1d6;
+            --pinyin-color: #666666;
+            --highlight: #e8f5e9;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121212;
+                --text-color: #e0e0e0;
+                --header-bg: #1e1e1e;
+                --card-bg: #1e1e1e;
+                --border-color: #333333;
+                --accent-color: #90caf9;
+                --pinyin-color: #aaaaaa;
+                --highlight: #1b2e1e;
+            }
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            font-size: 18px; /* High readability */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin-top: 0;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--pinyin-color);
+            margin-bottom: 30px;
+            font-weight: normal;
+        }
+
+        /* Day Container Styling */
+        .day-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .day-header {
+            background-color: var(--header-bg);
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .day-emoji {
+            font-size: 1.5rem;
+            margin-right: 12px;
+        }
+
+        .day-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .day-content {
+            padding: 20px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            margin: 12px 0;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-sizing: border-box;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-yt {
+            background-color: var(--yt-color);
+            color: white;
+        }
+
+        .btn-bili {
+            background-color: var(--bili-color);
+            color: white;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--text-color);
+            color: var(--text-color);
+        }
+
+        /* Lyrics Styling */
+        .lyrics-box {
+            background-color: var(--highlight);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+        }
+
+        .lyric-group {
+            margin-bottom: 20px;
+        }
+
+        .cn-text {
+            font-size: 1.4rem;
+            font-weight: 600;
+            display: block;
+        }
+
+        .py-text {
+            font-size: 1rem;
+            color: var(--pinyin-color);
+            display: block;
+            margin-bottom: 4px;
+            font-family: 'Courier New', Courier, monospace; /* Monospace for alignment help */
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--header-bg);
+        }
+
+        /* Utility */
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+            background: #eee;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>林志炫 - 這世界那麼多人</h1>
+    <p class="subtitle">單曲精通：8天初學者歌唱學習計畫</p>
+
+    <!-- Day 1: Listening -->
+    <div class="day-card">
+        <div class="day-header">
+            <span class="day-emoji">🎧</span>
+            <span class="day-title">第 1 天：沉浸與聆聽 (原唱與現場)</span>
+        </div>
+        <div class="day-content">
+            <p>今天的目標是熟悉旋律與情感。林志炫的版本以其細膩的氣息控制和情感層次著稱。請反覆聆聽，注意他何時輕聲低語，何時情緒激昂。</p>
+            
+            <a href="https://www.youtube.com/watch?v=s5eJDpVqCwc" target="_blank" class="btn btn-yt">
+                📺 YouTube: 林志炫《這世界那麼多人》純享版 (披荊斬棘的哥哥)
+            </a>
+            <a href="https://www.bilibili.com/video/BV1Lb4y1a7qG/" target="_blank" class="btn btn-bili">
+                📺 Bilibili: 林志炫 現場高音質版
+            </a>
+            <a href="https://www.youtube.com/watch?v=kYJz2N-tFp8" target="_blank" class="btn btn-yt">
+                📺 YouTube: 歌詞版 MV (含伴奏參考)
+            </a>
+        </div>
+    </div>
+
+    <!-- Day 2 & 3: Lyrics & Pinyin -->
+    <div class="day-card">
+        <div class="day-header">
+            <span class="day-emoji">📖</span>
+            <span class="day-title">第 2-3 天：歌詞發音與含義</span>
+        </div>
+        <div class="day-content">
+            <p>林志炫的咬字非常清晰且富有詩意。請朗讀以下歌詞，確保每個字的聲調準確。</p>
+            
+            <div class="lyrics-box">
+                <!-- Verse 1 -->
+                <div class="lyric-group">
+                    <span class="py-text">zhè shì jiè yǒu nà me duō rén</span>
+                    <span class="cn-text">這世界有那麼多人</span>
+                </div>
+                <div class="lyric-group">
+                    <span class="py-text">duō xìng yùn wǒ yǒu gè wǒ men</span>
+                    <span class="cn-text">多幸運 我有個我們</span>
+                </div>
+                <div class="lyric-group">
+                    <span class="py-text">zhè yōu cháng mìng yùn zhōng de chén hūn</span>
+                    <span class="cn-text">這悠長命運中的晨昏</span>
+                </div>
+                <div class="lyric-group">
+                    <span class="py-text">cháng ràng wǒ xiǎng qǐ nà gè yuǎn fāng de rén</span>
+                    <span class="cn-text">常讓我想起那個遠方的人</span>
+                </div>
+
+                <hr style="border: 0; border-top: 1px dashed #ccc; margin: 20px 0;">
+
+                <!-- Chorus -->
+                <div class="lyric-group">
+                    <span class="tag">副歌 (Chorus)</span><br>
+                    <span class="py-text">yuǎn guāng zhōng zǒu lái </span>
+                    <span class="cn-text">遠光中走來</span>
+                </div>
+                <div class="lyric-group">
+                    <span class="py-text">nǐ yī shēn qíng lǎng</span>
+                    <span class="cn-text">你一身晴朗</span>
+                </div>
+                <div class="lyric-group">
+                    <span class="py-text">shēn páng nà me duō rén kě shì jiè bù shēng bù xiǎng</span>
+                    <span class="cn-text">身旁那麼多人 可世界不聲不響</span>
+                </div>
+                <div class="lyric-group">
+                    <span class="py-text">xiào shēng zhōng fú dòng </span>
+                    <span class="cn-text">笑聲中浮動</span>
+                </div>
+                <div class="lyric-group">
+                    <span class="py-text">zhè yáng guāng</span>
+                    <span class="cn-text">這陽光</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Day 4: Notation & Theory -->
+    <div class="day-card">
+        <div class="day-header">
+            <span class="day-emoji">🎼</span>
+            <span class="day-title">第 4 天：簡譜與讀譜練習</span>
+        </div>
+        <div class="day-content">
+            <p>通過觀看簡譜視頻，掌握音準與節奏。特別注意切分音和長音的保持。</p>
+            
+            <a href="https://www.bilibili.com/video/BV1Qq4y1U7Qh" target="_blank" class="btn btn-bili">
+                🎵 Bilibili: 這世界那麼多人 - 鋼琴簡譜同步顯示 (適合識譜)
+            </a>
+            <a href="https://www.youtube.com/watch?v=5y2f3_1xQyE" target="_blank" class="btn btn-yt">
+                🎵 YouTube: 動態簡譜教學視頻
+            </a>
+            
+            <p><strong>練習重點：</strong></p>
+            <ul>
+                <li>跟隨視頻中的光標哼唱旋律（用"Lu"或"Da"音）。</li>
+                <li>注意休止符（0）的停頓，這是情感表達的關鍵。</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Day 5: Vocal Tutorials -->
+    <div class="day-card">
+        <div class="day-header">
+            <span class="day-emoji">👨‍🏫</span>
+            <span class="day-title">第 5 天：歌唱技巧教學</span>
+        </div>
+        <div class="day-content">
+            <p>學習如何像林志炫一樣處理氣息與真假音轉換。</p>
+
+            <a href="https://www.bilibili.com/video/BV1Rf4y1k7sY" target="_blank" class="btn btn-bili">
+                🎓 Bilibili: 聲樂老師分析林志炫唱法 (氣息與共鳴)
+            </a>
+            <a href="https://www.youtube.com/results?search_query=%E9%80%99%E4%B8%96%E7%95%8C%E9%82%A3%E9%BA%BC%E5%A4%9A%E4%BA%BA+%E6%95%99%E5%AD%B8" target="_blank" class="btn btn-yt">
+                🎓 YouTube: 搜索更多本歌教學視頻
+            </a>
+
+            <p><strong>技巧筆記：</strong></p>
+            <ul>
+                <li><strong>弱混聲：</strong> 主歌部分不要太用力，保持氣息流動。</li>
+                <li><strong>情感遞進：</strong> 第一次副歌溫柔，第二次副歌需要更強的支撐。</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Day 6: Instrumental Practice -->
+    <div class="day-card">
+        <div class="day-header">
+            <span class="day-emoji">🎤</span>
+            <span class="day-title">第 6-7 天：伴奏練習 (Karaoke)</span>
+        </div>
+        <div class="day-content">
+            <p>現在嘗試脫離原唱，跟隨伴奏演唱。如果林志炫版本的Key太高，可以嘗試標準版伴奏。</p>
+
+            <a href="https://www.youtube.com/watch?v=J3e3wJjOq_k" target="_blank" class="btn btn-yt">
+                🎹 YouTube: 高品質伴奏 (含歌詞字幕)
+            </a>
+            <a href="https://www.bilibili.com/video/BV1M64y1u7Xq" target="_blank" class="btn btn-bili">
+                🎹 Bilibili: 鋼琴伴奏版 (適合練習情緒)
+            </a>
+            <a href="https://www.youtube.com/watch?v=... (User to search specific key)" target="_blank" class="btn btn-outline">
+                🔍 提示：若音調不合，請在YouTube搜尋 "這世界那麼多人 降調/升調"
+            </a>
+        </div>
+    </div>
+
+    <!-- Schedule Overview -->
+    <div class="day-card">
+        <div class="day-header">
+            <span class="day-emoji">📅</span>
+            <span class="day-title">8天學習時間表總覽</span>
+        </div>
+        <div class="day-content">
+            <table>
+                <tr>
+                    <th>天數</th>
+                    <th>任務</th>
+                    <th>重點</th>
+                </tr>
+                <tr>
+                    <td>Day 1</td>
+                    <td>聆聽原曲</td>
+                    <td>熟悉林志炫版本的編曲氛圍</td>
+                </tr>
+                <tr>
+                    <td>Day 2</td>
+                    <td>朗讀歌詞</td>
+                    <td>糾正發音，理解歌詞意境</td>
+                </tr>
+                <tr>
+                    <td>Day 3</td>
+                    <td>跟唱 (有原聲)</td>
+                    <td>輕聲哼唱，對準節拍</td>
+                </tr>
+                <tr>
+                    <td>Day 4</td>
+                    <td>識譜練習</td>
+                    <td>觀看簡譜視頻，確認音高準確度</td>
+                </tr>
+                <tr>
+                    <td>Day 5</td>
+                    <td>技巧學習</td>
+                    <td>觀看教學，練習氣息控制</td>
+                </tr>
+                <tr>
+                    <td>Day 6</td>
+                    <td>分段練習</td>
+                    <td>專攻難唱的高音或轉音部分</td>
+                </tr>
+                <tr>
+                    <td>Day 7</td>
+                    <td>伴奏合練</td>
+                    <td>使用伴奏帶，錄音並回放檢查</td>
+                </tr>
+                <tr>
+                    <td>Day 8</td>
+                    <td>完整演繹</td>
+                    <td>投入情感，完成一次完整的錄製</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Final Summary -->
+    <div style="text-align: center; margin-top: 40px; margin-bottom: 60px;">
+        <h2>🎉 保持練習</h2>
+        <p>這首歌的美在於「敘事感」。不要刻意炫技，而是像講故事一樣唱出來。<br>如果遇到瓶頸，請回到 <strong>第 4 天</strong> 複習簡譜。</p>
+        <p style="font-size: 0.9rem; color: var(--pinyin-color);">*所有連結均連至 YouTube 或 Bilibili 第三方資源，請確保網路暢通。</p>
+    </div>
+
+</div>
+
+</body>
+</html>

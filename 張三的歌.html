@@ -1,231 +1,154 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>學習唱歌：張三的歌</title>
-    <style>
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            color: #1a1a1a;
-            line-height: 1.7;
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
-        }
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #121212;
-                color: #e0e0e0;
-            }
-            .day-container {
-                background-color: #1e1e1e;
-                border-color: #333;
-            }
-            a.button {
-                background-color: #333;
-                color: #e0e0e0;
-            }
-        }
-        h1, h2 {
-            text-align: center;
-        }
-        .day-container {
-            margin-bottom: 30px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-        }
-        .day-header {
-            font-size: 1.5em;
-            padding: 10px;
-            background-color: #eee;
-            border-radius: 5px;
-            text-align: center;
-        }
-        ol {
-            padding-left: 20px;
-        }
-        .resources {
-            margin-top: 20px;
-        }
-        a.button {
-            display: block;
-            background-color: #1a1a1a;
-            color: #fff;
-            padding: 15px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 10px 0;
-            font-size: 1.2em;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        pre {
-            white-space: pre-wrap;
-            font-family: monospace;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>學習唱歌程式：張三的歌</title>
+<style>
+body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #1a1a1a; line-height: 1.8; padding: 1em; max-width: 100%; margin: 0 auto; }
+h1, h2, h3 { color: #1a1a1a; }
+a { text-decoration: none; color: #007bff; }
+.button { display: block; padding: 1.2em; background: #007bff; color: white; text-align: center; border-radius: 8px; font-size: 1.2em; margin: 1em 0; }
+.day { margin: 2em 0; padding: 1.5em; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.day h2 { padding: 0.5em; border-radius: 4px; }
+#day1 { background: #fff4e6; } #day1 h2 { background: #ffdab9; }
+#day2 { background: #e6f4ff; } #day2 h2 { background: #add8e6; }
+#day3 { background: #e6ffe6; } #day3 h2 { background: #90ee90; }
+#day4 { background: #ffffe6; } #day4 h2 { background: #eee8aa; }
+#day5 { background: #ffe6e6; } #day5 h2 { background: #ffc0cb; }
+#day6 { background: #f4e6ff; } #day6 h2 { background: #dda0dd; }
+#day7 { background: #e6f4ff; } #day7 h2 { background: #87cefa; }
+#day8 { background: #e6ffe6; } #day8 h2 { background: #98fb98; }
+pre { white-space: pre-wrap; font-size: 1.1em; line-height: 1.4; }
+table { width: 100%; border-collapse: collapse; margin: 2em 0; }
+th, td { padding: 1em; border: 1px solid #ddd; text-align: left; }
+@media (prefers-color-scheme: dark) {
+  body { background: #1a1a1a; color: #f0f0f0; }
+  h1, h2, h3 { color: #f0f0f0; }
+  .day { box-shadow: 0 2px 4px rgba(255,255,255,0.1); border: 1px solid #444; }
+  #day1 { background: #4a3c31; } #day1 h2 { background: #664d3e; }
+  #day2 { background: #314a5e; } #day2 h2 { background: #3e5f77; }
+  #day3 { background: #314a31; } #day3 h2 { background: #3e663e; }
+  #day4 { background: #4a4a31; } #day4 h2 { background: #66663e; }
+  #day5 { background: #4a3131; } #day5 h2 { background: #663e3e; }
+  #day6 { background: #46314a; } #day6 h2 { background: #5f3e66; }
+  #day7 { background: #314a5e; } #day7 h2 { background: #3e5f77; }
+  #day8 { background: #314a31; } #day8 h2 { background: #3e663e; }
+  .button { background: #0056d2; }
+  table th, td { border: 1px solid #444; }
+}
+</style>
 </head>
 <body>
-    <h1>學習唱歌：張三的歌（李壽全）</h1>
-    
-    <div class="day-container">
-        <div class="day-header">🌅 第 1 天：熟悉歌曲</div>
-        <ol>
-            <li>反覆聆聽歌曲至少 5 次。</li>
-            <li>閱讀歌詞，理解內容。</li>
-            <li>試著跟唱副歌部分。</li>
-        </ol>
-        <div class="resources">
-            <h3>資源：</h3>
-            <a href="https://www.youtube.com/watch?v=l8vJuVxhWOw" class="button">歌曲 MV 與歌詞（YouTube）</a>
-            <pre>歌詞帶拼音：
-我要帶你到處去飛翔
-wǒ yào dài nǐ dào chù qù fēi xiáng
-走遍世界各地去觀賞
-zǒu biàn shì jiè gè dì qù guān shǎng
-沒有煩惱沒有那悲傷
-méi yǒu fán nǎo méi yǒu nà bēi shāng
-自由自在身心多開朗
-zì yóu zì zài shēn xīn duō kāi lǎng
-忘掉痛苦忘掉那地方
-wàng diào tòng kǔ wàng diào nà dì fāng
-我們一起啟程去流浪
-wǒ men yī qǐ qǐ chéng qù liú làng
-雖然沒有華廈美衣裳
-suī rán méi yǒu huá shà měi yī shang
-但是心裡充滿著希望
-dàn shì xīn lǐ chōng mǎn zhe xī wàng
-我們要飛到那遙遠地方
-wǒ men yào fēi dào nà yáo yuǎn dì fāng
-看一看這世界並非那麼淒涼
-kàn yī kàn zhè shì jiè bìng fēi nà me qī liáng
-我們活在那快樂的時光
-wǒ men huó zài nà kuài lè de shí guāng</pre>
-        </div>
-    </div>
-    
-    <div class="day-container">
-        <div class="day-header">📖 第 2 天：學習發音</div>
-        <ol>
-            <li>使用拼音練習每個字的發音。</li>
-            <li>慢速跟讀歌詞。</li>
-            <li>錄音自己發音並比較。</li>
-        </ol>
-        <div class="resources">
-            <h3>資源：</h3>
-            <a href="https://www.youtube.com/watch?v=I69JT5bXqmg" class="button">歌詞影片（YouTube）</a>
-        </div>
-    </div>
-    
-    <div class="day-container">
-        <div class="day-header">🎤 第 3 天：跟唱練習</div>
-        <ol>
-            <li>跟著有聲版本唱整首歌。</li>
-            <li>注意節奏和音準。</li>
-            <li>重複難的部分。</li>
-        </ol>
-        <div class="resources">
-            <h3>資源：</h3>
-            <a href="https://www.youtube.com/watch?v=EJQ6QiaZul8" class="button">齊秦版本演唱（YouTube）</a>
-        </div>
-    </div>
-    
-    <div class="day-container">
-        <div class="day-header">🎹 第 4 天：伴奏練習</div>
-        <ol>
-            <li>使用器樂版練習唱歌。</li>
-            <li>試著不看歌詞唱。</li>
-            <li>注意呼吸控制。</li>
-        </ol>
-        <div class="resources">
-            <h3>資源：</h3>
-            <a href="https://www.youtube.com/watch?v=HBC_LI936gU" class="button">卡拉OK 伴奏（YouTube）</a>
-        </div>
-    </div>
-    
-    <div class="day-container">
-        <div class="day-header">🎼 第 5 天：學習簡譜</div>
-        <ol>
-            <li>閱讀簡譜，理解音符。</li>
-            <li>哼唱簡譜。</li>
-            <li>結合歌詞練習。</li>
-        </ol>
-        <div class="resources">
-            <h3>資源：</h3>
-            <pre>簡譜示例（文字版）：
-5 3 5 6 1 2 3
-我要帶你到處去飛翔
-（完整簡譜請參考視頻）</pre>
-            <a href="https://www.youtube.com/watch?v=yLQIL_MQSaI" class="button">簡譜教學（YouTube）</a>
-        </div>
-    </div>
-    
-    <div class="day-container">
-        <div class="day-header">📹 第 6 天：教學教程</div>
-        <ol>
-            <li>觀看教學影片。</li>
-            <li>跟隨步驟練習唱法。</li>
-            <li>注重情感表達。</li>
-        </ol>
-        <div class="resources">
-            <h3>資源：</h3>
-            <a href="https://www.youtube.com/watch?v=vb6L41_qouk" class="button">吉他彈唱教學（YouTube）</a>
-        </div>
-    </div>
-    
-    <div class="day-container">
-        <div class="day-header">🔍 第 7 天：讀譜練習</div>
-        <ol>
-            <li>使用簡譜讀譜影片練習。</li>
-            <li>慢速跟唱。</li>
-            <li>加速到正常速度。</li>
-        </ol>
-        <div class="resources">
-            <h3>資源：</h3>
-            <a href="https://www.youtube.com/watch?v=yLQIL_MQSaI" class="button">簡譜讀譜影片（YouTube）</a>
-        </div>
-    </div>
-    
-    <div class="day-container">
-        <div class="day-header">🏆 第 8 天：總結與錄音</div>
-        <ol>
-            <li>完整唱一次並錄音。</li>
-            <li>自我評估改進點。</li>
-            <li>分享給朋友求反饋。</li>
-        </ol>
-        <div class="resources">
-            <h3>資源：</h3>
-            <a href="https://www.youtube.com/watch?v=HBC_LI936gU" class="button">伴奏錄音使用（YouTube）</a>
-        </div>
-    </div>
-    
-    <h2>8 天學習計劃概覽</h2>
-    <table>
-        <tr><th>日子</th><th>重點</th></tr>
-        <tr><td>第 1 天</td><td>熟悉歌曲</td></tr>
-        <tr><td>第 2 天</td><td>學習發音</td></tr>
-        <tr><td>第 3 天</td><td>跟唱練習</td></tr>
-        <tr><td>第 4 天</td><td>伴奏練習</td></tr>
-        <tr><td>第 5 天</td><td>學習簡譜</td></tr>
-        <tr><td>第 6 天</td><td>教學教程</td></tr>
-        <tr><td>第 7 天</td><td>讀譜練習</td></tr>
-        <tr><td>第 8 天</td><td>總結與錄音</td></tr>
-    </table>
-    
-    <h2>最終總結</h2>
-    <p>恭喜你完成 8 天學習計劃！你已掌握《張三的歌》的基本唱法，包括發音、節奏、情感。記得持續練習，唱歌不僅是技巧，更是表達內心。保持熱情，继续唱下去！</p>
+<h1>學習唱歌程式：張三的歌</h1>
+<p>這是為初學者設計的8天學習計劃，幫助你學習唱這首歌。請跟隨每日計劃練習。</p>
+
+<div class="day" id="day1">
+<h2>📅 第一天：熟悉歌曲</h2>
+<p>行動計劃：聽幾次歌曲的MV版本，注意旋律和情感。每天至少聽3-5次。</p>
+<h3>資源：</h3>
+<a class="button" href="https://www.youtube.com/watch?v=23spUshxF3w">MV與歌詞版本1 (2024年)</a>
+<a class="button" href="https://www.youtube.com/watch?v=ea6VM4yWbHI">MV與歌詞版本2 (2024年)</a>
+<a class="button" href="https://www.youtube.com/watch?v=LmbBraKJUcg">MV與歌詞版本3 (2024年)</a>
+</div>
+
+<div class="day" id="day2">
+<h2>📖 第二天：學習歌詞</h2>
+<p>行動計劃：閱讀歌詞，練習發音。使用拼音輔助大聲朗讀。</p>
+<h3>資源：</h3>
+<pre>我要帶你到處去飛翔 走遍世界各地去觀賞
+wǒ yào dài nǐ dào chù qù fēi xiáng zǒu biàn shì jiè gè dì qù guān shǎng
+
+沒有煩惱沒有那悲傷 自由自在身心多開朗
+méi yǒu fán nǎo méi yǒu nà bēi shāng zì yóu zì zài shēn xīn duō kāi lǎng
+
+忘掉痛苦忘掉那地方 我們一起啟程去流浪
+wàng diào tòng kǔ wàng diào nà dì fang wǒ men yī qǐ qǐ chéng qù liú làng
+
+雖然會有時迷失了方向 雖然會有時會孤單惆悵
+suī rán huì yǒu shí mí shī le fāng xiàng suī rán huì yǒu shí huì gū dān chòu chàng
+
+路遙遠人茫茫 豪情在勇往直前
+lù yáo yuǎn rén máng máng háo qíng zài yǒng wǎng zhí qián
+
+英雄也無所求 但願愛在我身邊長伴到永久
+yīng xióng yě wú suǒ qiú dàn yuàn ài zài wǒ shēn biān cháng bàn dào yǒng jiǔ</pre>
+</div>
+
+<div class="day" id="day3">
+<h2>🎵 第三天：聽伴奏版本</h2>
+<p>行動計劃：聽儀器伴奏版本，試著哼唱旋律。</p>
+<h3>資源：</h3>
+<a class="button" href="https://www.bilibili.com/video/BV1Su4y1N7DK/">伴奏版本1 (Bilibili)</a>
+<a class="button" href="https://www.bilibili.com/video/BV1NssLeuET7?p=30">伴奏版本2 (Bilibili)</a>
+</div>
+
+<div class="day" id="day4">
+<h2>🎼 第四天：學習簡譜</h2>
+<p>行動計劃：閱讀簡譜，練習按照數字唱出旋律。</p>
+<h3>資源：</h3>
+<pre>5 5 6 1 2 3 2 1 6. 5. 0
+5 5 6 1 2 3 2 1 6. 5. 0
+1 1 2 3 5 3 2 1 2. 1. 0
+(示例簡譜，完整版請參考資源)</pre>
+<a class="button" href="https://hy.ktvc8.com/mobile/1003748_1.html">簡譜資源1</a>
+<a class="button" href="http://www.jianpuw.com/htm/bu/332088.htm">簡譜資源2</a>
+</div>
+
+<div class="day" id="day5">
+<h2>👩‍🏫 第五天：教學教程</h2>
+<p>行動計劃：觀看教學視頻，學習唱歌技巧。</p>
+<h3>資源：</h3>
+<a class="button" href="https://www.youtube.com/watch?v=ASo7aZ2ITaM">尤克里里彈唱教學 (2020年)</a>
+<a class="button" href="https://www.youtube.com/watch?v=OzvtidO6iVE">吉他彈唱教學 (2020年)</a>
+<a class="button" href="https://www.bilibili.com/video/BV1xN411c7zj">尤克里里彈唱教學 (Bilibili)</a>
+<a class="button" href="https://www.bilibili.com/video/BV1Eg1kYKEvY/">吉他教學 (Bilibili)</a>
+</div>
+
+<div class="day" id="day6">
+<h2>📖 第六天：簡譜讀譜練習</h2>
+<p>行動計劃：觀看簡譜教學視頻，練習讀譜唱歌。</p>
+<h3>資源：</h3>
+<a class="button" href="https://www.youtube.com/watch?v=yLQIL_MQSaI">學簡譜教學 (2025年)</a>
+<a class="button" href="https://www.youtube.com/watch?v=fLTD4Whk9AQ">初階版簡譜教學 (2022年)</a>
+<a class="button" href="https://www.youtube.com/watch?v=UqBlMKjs8OE">薩克斯風演奏簡譜 (2024年)</a>
+<a class="button" href="https://www.bilibili.com/video/BV1Z14y1L7CV/">零基礎學簡譜 (Bilibili)</a>
+</div>
+
+<div class="day" id="day7">
+<h2>🎤 第七天：完整練習</h2>
+<p>行動計劃：結合歌詞、簡譜和伴奏，全曲練習唱歌。</p>
+<h3>資源：</h3>
+<a class="button" href="https://www.youtube.com/watch?v=gdODQAXXR7Q">自彈自唱示範 (2017年)</a>
+<a class="button" href="https://www.bilibili.com/video/BV1st4y1G7kT?p=98">歌曲示範 (Bilibili)</a>
+</div>
+
+<div class="day" id="day8">
+<h2>🔍 第八天：審視與重複</h2>
+<p>行動計劃：唱完整首歌，錄音自我審視，重複弱點練習。</p>
+<h3>資源：</h3>
+<a class="button" href="https://www.youtube.com/watch?v=XMdm5p-aHCc">教唱版簡譜 (2018年)</a>
+<a class="button" href="https://www.bilibili.com/video/BV13i4y1Z7hE/">新歌練習 (Bilibili)</a>
+</div>
+
+<h2>8天計劃概覽</h2>
+<table>
+<thead>
+<tr><th>天數</th><th>焦點</th></tr>
+</thead>
+<tbody>
+<tr><td>第一天</td><td>熟悉歌曲</td></tr>
+<tr><td>第二天</td><td>學習歌詞</td></tr>
+<tr><td>第三天</td><td>聽伴奏版本</td></tr>
+<tr><td>第四天</td><td>學習簡譜</td></tr>
+<tr><td>第五天</td><td>教學教程</td></tr>
+<tr><td>第六天</td><td>簡譜讀譜練習</td></tr>
+<tr><td>第七天</td><td>完整練習</td></tr>
+<tr><td>第八天</td><td>審視與重複</td></tr>
+</tbody>
+</table>
+
+<h2>總結</h2>
+<p>恭喜你完成8天學習計劃！你已經掌握了歌詞、旋律和唱歌技巧。繼續練習，唱歌會更自然。記住，練習是進步的關鍵，保持熱情！</p>
 </body>
 </html>

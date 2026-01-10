@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學習唱《只要活著就好》 - 大歡 8天初學者程式</title>
+    <style>
+        :root {
+            --text-color: #1a1a1a;
+            --bg-color: #ffffff;
+            --link-color: #007bff;
+            --button-bg: #007bff;
+            --button-text: #ffffff;
+            --day-header-bg: #f0f0f0;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-color: #f0f0f0;
+                --bg-color: #1a1a1a;
+                --link-color: #4da6ff;
+                --button-bg: #0056b3;
+                --button-text: #f0f0f0;
+                --day-header-bg: #333333;
+            }
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.8;
+            padding: 1em;
+            margin: 0;
+            font-size: 1.1em;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            line-height: 1.4;
+        }
+
+        .day {
+            margin-bottom: 2em;
+            padding: 1em;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .day {
+                border-color: #444;
+            }
+        }
+
+        .day-header {
+            background-color: var(--day-header-bg);
+            padding: 0.5em;
+            border-radius: 4px;
+            font-size: 1.4em;
+            margin-bottom: 1em;
+        }
+
+        .day:nth-child(1) .day-header { background-color: #ffdddd; }
+        .day:nth-child(2) .day-header { background-color: #ddffdd; }
+        .day:nth-child(3) .day-header { background-color: #ddddff; }
+        .day:nth-child(4) .day-header { background-color: #ffffdd; }
+        .day:nth-child(5) .day-header { background-color: #ffddff; }
+        .day:nth-child(6) .day-header { background-color: #ddffff; }
+        .day:nth-child(7) .day-header { background-color: #ffddee; }
+        .day:nth-child(8) .day-header { background-color: #eeffdd; }
+
+        @media (prefers-color-scheme: dark) {
+            .day:nth-child(1) .day-header { background-color: #993333; }
+            .day:nth-child(2) .day-header { background-color: #339933; }
+            .day:nth-child(3) .day-header { background-color: #333399; }
+            .day:nth-child(4) .day-header { background-color: #999933; }
+            .day:nth-child(5) .day-header { background-color: #993399; }
+            .day:nth-child(6) .day-header { background-color: #339999; }
+            .day:nth-child(7) .day-header { background-color: #994466; }
+            .day:nth-child(8) .day-header { background-color: #669933; }
+        }
+
+        ol {
+            padding-left: 1.5em;
+        }
+
+        .button {
+            display: block;
+            padding: 1em;
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 1em 0;
+            font-size: 1.2em;
+            min-height: 44px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2em 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.8em;
+            text-align: left;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            th, td {
+                border-color: #444;
+            }
+        }
+
+        .lyrics {
+            white-space: pre-wrap;
+            font-size: 1em;
+            margin: 1em 0;
+        }
+
+        .pinyin {
+            font-style: italic;
+            color: #666;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .pinyin {
+                color: #aaa;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>學習唱《只要活著就好》 - 大歡 8天初學者程式</h1>
+    
+    <div class="day">
+        <h2 class="day-header">📅 第1天：熟悉歌曲</h2>
+        <h3>行動計劃</h3>
+        <ol>
+            <li>反覆聆聽歌曲至少5次。</li>
+            <li>閱讀歌詞，理解歌曲含義。</li>
+            <li>注意歌曲的節奏和旋律。</li>
+        </ol>
+        <h3>資源</h3>
+        <a href="https://www.youtube.com/watch?v=ODkxi2O-4qg" class="button">觀看動態歌詞 MV (2022)</a>
+        <a href="https://www.youtube.com/watch?v=JvhCiZDRpbM" class="button">觀看 MTV (2022)</a>
+        <a href="https://www.youtube.com/watch?v=oIvTQzkGOb8" class="button">觀看演唱版本 (2022)</a>
+    </div>
+    
+    <div class="day">
+        <h2 class="day-header">🔤 第2天：學習發音</h2>
+        <h3>行動計劃</h3>
+        <ol>
+            <li>閱讀歌詞並跟隨拼音大聲朗讀。</li>
+            <li>練習每個詞的發音。</li>
+            <li>慢慢跟唱歌曲的前幾句。</li>
+        </ol>
+        <h3>資源</h3>
+        <div class="lyrics">
+            <p>人活著都是一樣的</p>
+            <p class="pinyin">rén huó zhe dōu shì yī yàng de</p>
+            <p>辛勞苦樂參半一樣的煩惱</p>
+            <p class="pinyin">xīn láo kǔ lè cān bàn yī yàng de fán nǎo</p>
+            <p>只要還活在這世上</p>
+            <p class="pinyin">zhǐ yào hái huó zài zhè shì shàng</p>
+            <p>就好好的生活一定會來到</p>
+            <p class="pinyin">jiù hǎo hǎo de shēng huó yī dìng huì lái dào</p>
+            <p>每一步都是辛苦的記號</p>
+            <p class="pinyin">měi yī bù dōu shì xīn kǔ de jì hào</p>
+            <p>記得要讓自己微笑</p>
+            <p class="pinyin">jì de yào ràng zì jǐ wēi xiào</p>
+            <p>人生在世沒有什麼大不了</p>
+            <p class="pinyin">rén shēng zài shì méi yǒu shén me dà bù liǎo</p>
+            <p>只要活著就好</p>
+            <p class="pinyin">zhǐ yào huó zhe jiù hǎo</p>
+            <p>誰知道你過的好不好</p>
+            <p class="pinyin">shuí zhī dào nǐ guò de hǎo bù hǎo</p>
+            <p>誰在意你的痛苦煎熬</p>
+            <p class="pinyin">shuí zài yì nǐ de tòng kǔ jiān áo</p>
+            <p>雖然沒有誰能感同身受</p>
+            <p class="pinyin">suī rán méi yǒu shuí néng gǎn tóng shēn shòu</p>
+            <p>但請不要一個人難熬</p>
+            <p class="pinyin">dàn qǐng bù yào yī gè rén nán áo</p>
+            <p>誰都有過心酸和煎熬</p>
+            <p class="pinyin">shuí dōu yǒu guò xīn suān hé jiān áo</p>
+            <p>誰不是一邊受傷一邊往前跑</p>
+            <p class="pinyin">shuí bù shì yī biān shòu shāng yī biān wǎng qián pǎo</p>
+            <p>人生在世沒有什麼大不了</p>
+            <p class="pinyin">rén shēng zài shì méi yǒu shén me dà bù liǎo</p>
+            <p>只要活著就好</p>
+            <p class="pinyin">zhǐ yào huó zhe jiù hǎo</p>
+            <!-- Repeat the verse -->
+            <p>人活著都是一樣的</p>
+            <p class="pinyin">rén huó zhe dōu shì yī yàng de</p>
+            <p>辛勞苦樂參半一樣的煩惱</p>
+            <p class="pinyin">xīn láo kǔ lè cān bàn yī yàng de fán nǎo</p>
+            <p>只要還活在這世上</p>
+            <p class="pinyin">zhǐ yào hái huó zài zhè shì shàng</p>
+            <p>就好好的生活一定會來到</p>
+            <p class="pinyin">jiù hǎo hǎo de shēng huó yī dìng huì lái dào</p>
+            <p>每一步都是辛苦的記號</p>
+            <p class="pinyin">měi yī bù dōu shì xīn kǔ de jì hào</p>
+            <p>記得要讓自己微笑</p>
+            <p class="pinyin">jì de yào ràng zì jǐ wēi xiào</p>
+            <p>人生在世沒有什麼大不了</p>
+            <p class="pinyin">rén shēng zài shì méi yǒu shén me dà bù liǎo</p>
+            <p>只要活著就好</p>
+            <p class="pinyin">zhǐ yào huó zhe jiù hǎo</p>
+            <p>誰知道你過的好不好</p>
+            <p class="pinyin">shuí zhī dào nǐ guò de hǎo bù hǎo</p>
+            <p>誰在意你的痛苦煎熬</p>
+            <p class="pinyin">shuí zài yì nǐ de tòng kǔ jiān áo</p>
+            <p>雖然沒有誰能感同身受</p>
+            <p class="pinyin">suī rán méi yǒu shuí néng gǎn tóng shēn shòu</p>
+            <p>但請不要一個人難熬</p>
+            <p class="pinyin">dàn qǐng bù yào yī gè rén nán áo</p>
+            <p>誰都有過心酸和煎熬</p>
+            <p class="pinyin">shuí dōu yǒu guò xīn suān hé jiān áo</p>
+            <p>誰不是一邊受傷一邊往前跑</p>
+            <p class="pinyin">shuí bù shì yī biān shòu shāng yī biān wǎng qián pǎo</p>
+            <p>人生在世沒有什麼大不了</p>
+            <p class="pinyin">rén shēng zài shì méi yǒu shén me dà bù liǎo</p>
+            <p>只要活著就好</p>
+            <p class="pinyin">zhǐ yào huó zhe jiù hǎo</p>
+            <p>人生在世沒有什麼大不了</p>
+            <p class="pinyin">rén shēng zài shì méi yǒu shén me dà bù liǎo</p>
+            <p>只要活著就好</p>
+            <p class="pinyin">zhǐ yào huó zhe jiù hǎo</p>
+        </div>
+    </div>
+    
+    <div class="day">
+        <h2 class="day-header">🎵 第3天：分解歌曲</h2>
+        <h3>行動計劃</h3>
+        <ol>
+            <li>將歌曲分成 verse 和 chorus。</li>
+            <li>練習每部分的發音和旋律。</li>
+            <li>跟隨影片哼唱。</li>
+        </ol>
+        <h3>資源</h3>
+        <a href="https://www.youtube.com/watch?v=ODkxi2O-4qg" class="button">練習用動態歌詞 MV</a>
+    </div>
+    
+    <div class="day">
+        <h2 class="day-header">🎤 第4天：哼唱旋律</h2>
+        <h3>行動計劃</h3>
+        <ol>
+            <li>不看歌詞哼唱旋律。</li>
+            <li>注意高低音變化。</li>
+            <li>重複練習難的部分。</li>
+        </ol>
+        <h3>資源</h3>
+        <a href="https://www.youtube.com/watch?v=JvhCiZDRpbM" class="button">哼唱用 MTV</a>
+    </div>
+    
+    <div class="day">
+        <h2 class="day-header">🗣️ 第5天：跟唱練習</h2>
+        <h3>行動計劃</h3>
+        <ol>
+            <li>跟隨原唱完整唱一次。</li>
+            <li>注意節奏和呼吸。</li>
+            <li>錄音自己聽回放。</li>
+        </ol>
+        <h3>資源</h3>
+        <a href="https://www.youtube.com/watch?v=oIvTQzkGOb8" class="button">跟唱演唱版本</a>
+    </div>
+    
+    <div class="day">
+        <h2 class="day-header">🔁 第6天：重複練習</h2>
+        <h3>行動計劃</h3>
+        <ol>
+            <li>練習整個歌曲3-5次。</li>
+            <li>專注改善弱點。</li>
+            <li>使用拼音輔助發音。</li>
+        </ol>
+        <h3>資源</h3>
+        <a href="https://www.youtube.com/watch?v=ODkxi2O-4qg" class="button">重複練習動態歌詞 MV</a>
+    </div>
+    
+    <div class="day">
+        <h2 class="day-header">🎼 第7天：完整表演</h2>
+        <h3>行動計劃</h3>
+        <ol>
+            <li>不看歌詞完整唱歌。</li>
+            <li>加入情感表達。</li>
+            <li>錄音比較進步。</li>
+        </ol>
+        <h3>資源</h3>
+        <a href="https://www.youtube.com/watch?v=JvhCiZDRpbM" class="button">表演用 MTV</a>
+    </div>
+    
+    <div class="day">
+        <h2 class="day-header">✅ 第8天：審視與維持</h2>
+        <h3>行動計劃</h3>
+        <ol>
+            <li>回顧所有練習。</li>
+            <li>唱給朋友聽求反饋。</li>
+            <li>計劃持續練習。</li>
+        </ol>
+        <h3>資源</h3>
+        <a href="https://www.youtube.com/watch?v=oIvTQzkGOb8" class="button">審視用演唱版本</a>
+    </div>
+    
+    <h2>8天計劃概覽</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>天數</th>
+                <th>焦點</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>第1天</td>
+                <td>熟悉歌曲</td>
+            </tr>
+            <tr>
+                <td>第2天</td>
+                <td>學習發音</td>
+            </tr>
+            <tr>
+                <td>第3天</td>
+                <td>分解歌曲</td>
+            </tr>
+            <tr>
+                <td>第4天</td>
+                <td>哼唱旋律</td>
+            </tr>
+            <tr>
+                <td>第5天</td>
+                <td>跟唱練習</td>
+            </tr>
+            <tr>
+                <td>第6天</td>
+                <td>重複練習</td>
+            </tr>
+            <tr>
+                <td>第7天</td>
+                <td>完整表演</td>
+            </tr>
+            <tr>
+                <td>第8天</td>
+                <td>審視與維持</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>總結</h2>
+    <p>恭喜你完成8天學習程式！你已掌握《只要活著就好》的歌詞、發音和旋律。記住，唱歌是關於享受過程。繼續練習，探索更多歌曲，保持你的聲音活躍！</p>
+</body>
+</html>
